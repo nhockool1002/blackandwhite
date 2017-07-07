@@ -1,0 +1,44 @@
+*{}
+
+.searchbox input.form-control {
+    margin-right: 32px;
+}
+
+.menu-primary a.nav-link.first-item {
+    color: white;
+    margin-left: 30px;
+}
+
+    .navbar-default {
+      background-color: #000;
+      border-color: #030033;
+  }
+
+.banner img {
+    width: 1000px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.datetime span {
+    font-size: 12px;
+    color: blue;
+}
+
+.datetime span {
+    float: right;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 192px;
+    margin-top: 0px;
+    margin-left: 28px;
+    background-color: transparent;
+}
