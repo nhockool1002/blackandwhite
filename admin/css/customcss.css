@@ -1,0 +1,120 @@
+{}*
+
+body{
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+a.edit-dis {
+    text-decoration: none;
+    color: #0e00e4;
+    font-weight: 400;
+}
+
+a.edit-dis:hover {
+    color: orange;
+}
+
+.row.pagination {text-align: center;z-index: 999;float: right;}
+
+.row {}
+
+.user-mana div {
+    margin-left: 15px;
+}
+
+#showPR a {
+    text-decoration: none;
+    color: #1021ec;
+    font-weight: 600;
+    margin-left: 37px;
+}
+
+#showPR a:hover {
+    color: #ff2f00;
+    font-weight: 400;
+}
+
+#showPR .card-texts:hover {
+    color: #ef1f1f;
+}
+
+#showPR .card-texts {
+    font-weight: 500;
+    color: #2b28f5;
+    text-align: center;
+}
+
+#showPR .card-text {
+    margin-top: -6px;
+    text-align: center;
+    color: green;
+}
+
+
+#showPR h5.card-title {
+    text-align: center;
+    font-weight: 400;
+    color: red;
+}
+
+.dsdm-css {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+p.list-cat-pr {
+    margin-left: 33px;
+}
+
+.dsdm-css {
+    background-color: #efefef;
+    border-radius: 20px;
+}
+
+p.list-cat-pr {
+    font-weight: 500;
+    color: #009df9;
+}
+
+.list-cat-pr a {
+    text-decoration: none;
+    color: #1869e2;
+}
+
+.list-cat-pr a:hover {
+    color: darkorange;
+}
+
+p.list-cat-pr:hover {
+    color: #e8480b;
+}
+
+p.cat-title {
+    font-weight: 500;
+    font-size: 19px;
+}
+
+p.newcatname {
+    font-weight: 500;
+    font-size: 13px;
+    color: #054fda;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
