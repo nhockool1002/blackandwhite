@@ -1,5 +1,10 @@
 *{}
 
+a.nav-link.dropdown-toggle.item-menu-primary {
+    margin-left: 25px;
+    color: white;
+}
+
 .card.col-sm-3.bookoject {
     margin-top: 10px;
 }
@@ -53,7 +58,7 @@ nav.navbar.navbar-default.navbar-fnt.navbar-backgrnd.menu-primary {
 }
 
 .searchbox input.form-control {
-    margin-right: 32px;
+    margin-right: 15px;
 }
 
 .menu-primary a.nav-link.first-item {
