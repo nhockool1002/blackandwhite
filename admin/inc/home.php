@@ -66,13 +66,13 @@
     <tbody>
       <?php
         $sql1 = "SELECT * FROM users
-                ORDER BY user_id DESC
+                ORDER BY userid DESC
                 LIMIT 0,5";
         $rows = $obj->select($sql1);
         foreach ($rows as $row) {
       ?>
       <tr class="warning">
-        <td class="success"><?php echo $row["user_id"]; ?></td>
+        <td class="success"><?php echo $row["userid"]; ?></td>
         <td><?php echo $row["username"]; ?></td>
         <td><?php echo $row["email"]; ?></td>
       </tr>

@@ -14,7 +14,9 @@ session_start(); ?>
     require_once("include/banner.php");
     require_once("include/menuprimary.php");
     require_once("include/status.php");
-    require_once("include/favorite.php");
+    if(!isset($_GET['page'])){
+      require_once("include/favorite.php");
+    }
     ?>
     <div class="container-fluid">
       <div class="row">
