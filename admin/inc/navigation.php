@@ -132,7 +132,7 @@
                         <a href="index.php?page=catlist"><i class="glyphicon glyphicon-share"></i> Danh sách Sách</a>
                     </li>
                     <li>
-                        <a href="index.php?page=addcat"><i class="glyphicon glyphicon-share"></i> Thêm sách mới</a>
+                        <a href="index.php?page=them-sach"><i class="glyphicon glyphicon-share"></i> Thêm sách mới</a>
                     </li>
                     <li>
                         <a href="index.php?page=statcat"><i class="glyphicon glyphicon-share"></i> Thông kê sách</a>
@@ -154,13 +154,13 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo8"><i class="glyphicon glyphicon-cloud"></i> Quản lý Thành viên <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo8"><i class="glyphicon glyphicon-cloud"></i> Quản lý Tác giả <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo8" class="collapse">
                     <li>
-                        <a href="index.php?page=discountlist"><i class="glyphicon glyphicon-share"></i> Danh sách Thành viên </a>
+                        <a href="index.php?page=discountlist"><i class="glyphicon glyphicon-share"></i> Danh sách Tác giả </a>
                     </li>
                     <li>
-                        <a href="index.php?page=adddiscount"><i class="glyphicon glyphicon-share"></i> Thêm Thành viên mới</a>
+                        <a href="index.php?page=them-tac-gia"><i class="glyphicon glyphicon-share"></i> Thêm tác giả mới</a>
                     </li>
                 </ul>
             </li>

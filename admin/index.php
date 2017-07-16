@@ -98,6 +98,28 @@ $(document).ready(function() { // Vì js này nằm trên đoạn html, nên ph�
       });
     });
 </script>
+<!-- AJAX Add Author -->
+<script>
+    $(document).ready(function() {
+      $("#addauthor-button").click(function() {
+        var addauthorname = $("#addauthor-name").val();
+        console.log(addauthorname);
+        $.get("function/addnewauthor.php",{addauthorname : addauthorname},function(data){
+          if (data == 1) {
+            $("#addauthor-status").html("Có dữ liệu bị trùng vui lòng kiểm tra lại");
+            $("#addauthor-status").css("font-weight","bold");
+          }
+          else {
+            $("#addauthor-status").html("Đã thêm danh mục mới");
+            $("#addauthor-status").css("font-weight","bold");
+            setTimeout(function(){
+                       window.location = 'index.php?page=them-tac-gia';
+                  }, 50);
+          }
+        });
+      });
+    });
+</script>
 <!-- AJAX Add Category -->
 <script>
     $(document).ready(function() {
@@ -147,6 +169,12 @@ $(document).ready(function() { // Vì js này nằm trên đoạn html, nên ph�
       }
       else $id = "";
       switch ($id) {
+        case 'them-sach':
+          include("inc/addbook.php");
+          break;
+        case 'them-tac-gia':
+          include("inc/addauthor.php");
+          break;
         case 'danh-sach-danh-muc':
           include("inc/catlist.php");
           break;

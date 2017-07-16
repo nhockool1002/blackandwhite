@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 15, 2017 lúc 11:07 SA
--- Phiên bản máy phục vụ: 10.1.21-MariaDB
--- Phiên bản PHP: 5.6.30
+-- Thời gian đã tạo: Th7 16, 2017 lúc 12:33 PM
+-- Phiên bản máy phục vụ: 10.1.25-MariaDB
+-- Phiên bản PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +21,44 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `blackandwhite`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `author`
+--
+
+CREATE TABLE `author` (
+  `authorid` int(100) NOT NULL,
+  `authorname` varchar(255) NOT NULL,
+  `degree` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `author`
+--
+
+INSERT INTO `author` (`authorid`, `authorname`, `degree`) VALUES
+(2, 'Nguyễn Thơ Sinh', ''),
+(3, 'PGS. TS. Trần Thị Minh Đức', '');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `books`
+--
+
+CREATE TABLE `books` (
+  `bookid` int(100) NOT NULL,
+  `bookname` varchar(255) NOT NULL,
+  `author` int(100) NOT NULL,
+  `nxb` varchar(255) NOT NULL,
+  `year` int(100) NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  `link` text NOT NULL,
+  `des` text NOT NULL,
+  `catid` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -37,7 +77,9 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`catid`, `catname`, `catnameseo`) VALUES
-(1, 'Tâm lý', 'tam-ly');
+(1, 'Tâm lý', 'tam-ly'),
+(2, 'Nước ngoài', 'nuoc-ngoai'),
+(3, 'Toán học', 'toan-hoc');
 
 -- --------------------------------------------------------
 
@@ -66,6 +108,20 @@ INSERT INTO `users` (`userid`, `username`, `password`, `email`) VALUES
 --
 
 --
+-- Chỉ mục cho bảng `author`
+--
+ALTER TABLE `author`
+  ADD PRIMARY KEY (`authorid`);
+
+--
+-- Chỉ mục cho bảng `books`
+--
+ALTER TABLE `books`
+  ADD PRIMARY KEY (`bookid`),
+  ADD KEY `author` (`author`),
+  ADD KEY `catid` (`catid`);
+
+--
 -- Chỉ mục cho bảng `category`
 --
 ALTER TABLE `category`
@@ -82,15 +138,37 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `author`
+--
+ALTER TABLE `author`
+  MODIFY `authorid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT cho bảng `books`
+--
+ALTER TABLE `books`
+  MODIFY `bookid` int(100) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `catid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `catid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
   MODIFY `userid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `books`
+--
+ALTER TABLE `books`
+  ADD CONSTRAINT `books_ibfk_1` FOREIGN KEY (`catid`) REFERENCES `category` (`catid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `books_ibfk_2` FOREIGN KEY (`author`) REFERENCES `author` (`authorid`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
