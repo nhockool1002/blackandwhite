@@ -113,6 +113,26 @@
       });
 
     </script>
+    <!-- AJAX Delete Book -->
+<script type="text/javascript">
+$(document).ready(function() { // Vì js này nằm trên đoạn html, nên phải đợi ready rồi mới add event click vào
+  $(".delbook").click(function() {
+  var id = $(this).data('id');
+  var answer = confirm ("Bạn có chắc chắn muốn xóa sách này không ?");
+    if (answer)
+    {
+      $.get("function/delbook.php",{id : id},function(data){
+          if (data==1) {
+            setTimeout(function(){
+                       window.location = 'index.php?page=danh-sach-sach';
+                  }, 0);
+          }
+          else alert("Không xóa được sách !");
+      });
+    }
+  });
+})
+</script>
     <!-- AJAX Delete Atuhor -->
 <script type="text/javascript">
 $(document).ready(function() { // Vì js này nằm trên đoạn html, nên phải đợi ready rồi mới add event click vào
@@ -239,6 +259,12 @@ $(document).ready(function() { // Vì js này nằm trên đoạn html, nên ph�
       }
       else $id = "";
       switch ($id) {
+        case 'sua-sach':
+          include("inc/updatebook.php");
+          break;
+        case 'danh-sach-sach':
+          include("inc/booklist.php");
+          break;
         case 'them-sach':
           include("inc/addbook.php");
           break;

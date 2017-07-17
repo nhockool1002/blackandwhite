@@ -129,7 +129,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="glyphicon glyphicon-certificate"></i> Quản lý Sách <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo2" class="collapse">
                     <li>
-                        <a href="index.php?page=catlist"><i class="glyphicon glyphicon-share"></i> Danh sách Sách</a>
+                        <a href="index.php?page=danh-sach-sach"><i class="glyphicon glyphicon-share"></i> Danh sách Sách</a>
                     </li>
                     <li>
                         <a href="index.php?page=them-sach"><i class="glyphicon glyphicon-share"></i> Thêm sách mới</a>
