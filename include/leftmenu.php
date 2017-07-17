@@ -3,21 +3,16 @@
     <li class="nav-item">
       <div href="#" class="nav-link active category">Danh mục sách</div>
     </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link"><span class="glyphicon glyphicon-th"></span>⏏ Tâm Lý</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link"><span class="glyphicon glyphicon-th"></span>⏏ Tin học</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link"><span class="glyphicon glyphicon-th"></span>⏏ Văn học</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link"><span class="glyphicon glyphicon-th"></span>⏏ Toán học</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link"><span class="glyphicon glyphicon-th"></span>⏏ Đời sống</a>
-    </li>
-  </ul>
+    <?php
+    $sql = "SELECT * FROM category";
+    $obj = new Db();
+    $rows = $obj->select($sql);
+    foreach ($rows as $row) {
 
+    ?>
+    <li class="nav-item">
+       <a href="index.php?danh-muc=<?php echo $row['catnameseo']; ?>" class="nav-link"><span class="glyphicon glyphicon-th"></span>⏏ <?php echo $row['catname']; ?></a>
+    </li>
+    <?php } ?>
+  </ul>
 </div>

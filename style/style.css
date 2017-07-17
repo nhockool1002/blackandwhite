@@ -1,4 +1,19 @@
 *{}
+iframe{
+  width: 800px;
+  height: 540px;
+}
+.favorite small.text-muted {
+}
+
+.favorite p.card-text {
+    font-size: 14px;
+}
+
+.favorite h4.card-title {
+    color: red;
+    font-size: 12px;
+}
 
 a.nav-link.dropdown-toggle.item-menu-primary {
     margin-left: 25px;

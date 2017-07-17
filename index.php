@@ -30,6 +30,9 @@ session_start(); ?>
             else $id = "";
 
             switch ($id) {
+              case 'xem-sach':
+                require_once("include/viewbook.php");
+                break;
               case 'gioi-thieu':
                 require_once("include/introduce.php");
                 break;

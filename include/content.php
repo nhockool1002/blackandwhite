@@ -6,96 +6,22 @@
     <div class="col-sm-12 text-sm-center">
       <div class="card-deck-wrapper">
         <div class="card-deck">
+          <?php
+            $sql = "SELECT * FROM books INNER JOIN author ON books.author = author.authorid";
+            $obj = new Db();
+            $rows = $obj->select($sql);
+            foreach ($rows as $row) {
+          ?>
           <div class="col-sm-3">
             <div class="card bookoject">
-              <img class="card-img-top" src="book/1.jpg" alt="Card image cap">
+            <a href="index.php?page=xem-sach&idbook=<?php echo $row['bookid']; ?>"><img class="card-img-top" src="upload/<?php echo $row['filename'];?>" alt="<?php echo $row['des'];?>" width="150px"></a>
               <div class="card-block">
-                <h4 class="card-title">Đối thoại với nhà báo</h4>
-                <p class="card-text"><small class="text-muted">Tác giá : Duy Khanh</small></p>
+                <a href="index.php?page=xem-sach&idbook=<?php echo $row['bookid']; ?>"><h4 class="card-title"><?php echo $row['bookname'];?></h4></a>
+                <p class="card-text"><small class="text-muted"><?php echo $row['authorname'];?></small></p>
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/2.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Đừng hoang tưởng về biển lớn</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Alan Phan</small></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">7 thói quen bạn trẻ thanh đạt</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Sean Covey</small></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/4.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Chat với tình địch</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Cấn Vân Khánh</small></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/1.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Đối thoại với nhà báo</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Duy Khanh</small></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/1.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Đối thoại với nhà báo</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Duy Khanh</small></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/1.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Đối thoại với nhà báo</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Duy Khanh</small></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/2.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Đừng hoang tưởng về biển lớn</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Alan Phan</small></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">7 thói quen bạn trẻ thanh đạt</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Sean Covey</small></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-sm-3">
-          <div class="card bookoject">
-            <img class="card-img-top" src="book/2.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title">Đừng hoang tưởng về biển lớn</h4>
-              <p class="card-text"><small class="text-muted">Tác giá : Alan Phan</small></p>
-            </div>
-          </div>
-          </div>
+          <?php } ?>
         </div>
       </div>
     </div>
