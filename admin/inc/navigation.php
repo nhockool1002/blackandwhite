@@ -157,7 +157,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo8"><i class="glyphicon glyphicon-cloud"></i> Quản lý Tác giả <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo8" class="collapse">
                     <li>
-                        <a href="index.php?page=discountlist"><i class="glyphicon glyphicon-share"></i> Danh sách Tác giả </a>
+                        <a href="index.php?page=danh-sach-tac-gia"><i class="glyphicon glyphicon-share"></i> Danh sách Tác giả </a>
                     </li>
                     <li>
                         <a href="index.php?page=them-tac-gia"><i class="glyphicon glyphicon-share"></i> Thêm tác giả mới</a>

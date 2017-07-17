@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 16, 2017 lúc 12:33 PM
--- Phiên bản máy phục vụ: 10.1.25-MariaDB
--- Phiên bản PHP: 5.6.31
+-- Thời gian đã tạo: Th7 17, 2017 lúc 06:10 SA
+-- Phiên bản máy phục vụ: 10.1.21-MariaDB
+-- Phiên bản PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -30,17 +28,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `author` (
   `authorid` int(100) NOT NULL,
-  `authorname` varchar(255) NOT NULL,
-  `degree` varchar(255) NOT NULL
+  `authorname` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `author`
 --
 
-INSERT INTO `author` (`authorid`, `authorname`, `degree`) VALUES
-(2, 'Nguyễn Thơ Sinh', ''),
-(3, 'PGS. TS. Trần Thị Minh Đức', '');
+INSERT INTO `author` (`authorid`, `authorname`) VALUES
+(2, 'ThS. Nguyễn Thơ Sinh'),
+(3, 'PGS. TS. Trần Thị Minh Đức');
 
 -- --------------------------------------------------------
 
@@ -167,7 +164,6 @@ ALTER TABLE `users`
 ALTER TABLE `books`
   ADD CONSTRAINT `books_ibfk_1` FOREIGN KEY (`catid`) REFERENCES `category` (`catid`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `books_ibfk_2` FOREIGN KEY (`author`) REFERENCES `author` (`authorid`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

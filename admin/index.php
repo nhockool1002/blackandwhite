@@ -35,6 +35,29 @@
       });
     })
     </script>
+    <!-- AJAX Get Info Author -->
+    <script type="text/javascript">
+    $(document).ready(function() { // Vì js này nằm trên đoạn html, nên phải đợi ready rồi mới add event click vào
+      $(".updateau").click(function() {
+      var id = $(this).data('id');
+      console.log(id);
+      $.get("function/getau.php",{id : id},function(data){
+        var obj = JSON.parse(data);
+        $("#auid-edit").val(obj.authorid);
+        console.log(obj);
+        $("#auname-edit").val(obj.authorname);
+        $("#au-status").html("Điền dữ liệu mới vào Form và nhấn lưu lại");
+        $("#au-status").css("color","red");
+        $("#au-status").css("text-align","center");
+        $("#au-status").css("font-weight","bold");
+        $("#kqAUID").html("Dữ liệu này không thể thay đổi");
+        $("#kqAUID").css("color","red");
+        $("#kqAUID").css("text-align","left");
+        $("#kqAUID").css("font-weight","bold");
+      })
+      });
+    })
+    </script>
     <!-- AJAX Edit Category -->
     <script type="text/javascript">
       $(document).ready(function(){
@@ -63,6 +86,53 @@
       });
 
     </script>
+    <!-- AJAX Edit Author -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#au-update").click(function(){
+          var id = $("#auid-edit").val();
+          var name = $("#auname-edit").val();
+          $.get("function/update-author.php",{id : id, name : name},function(data){
+            if(data == 1){
+              $("#au-status").html("Changed");
+              $("#au-status").css("color","green");
+              $("#au-status").css("text-align","center");
+              $("#au-status").css("font-weight","bold");
+              setTimeout(function(){
+                         window.location = 'index.php?page=danh-sach-tac-gia';
+                    }, 50);
+            }
+            else{
+              $("#au-status").html("SML");
+              $("#au-status").css("color","red");
+              $("#au-status").css("text-align","center");
+              $("#au-status").css("font-weight","bold");
+            }
+          });
+        });
+      });
+
+    </script>
+    <!-- AJAX Delete Atuhor -->
+<script type="text/javascript">
+$(document).ready(function() { // Vì js này nằm trên đoạn html, nên phải đợi ready rồi mới add event click vào
+  $(".delau").click(function() {
+  var id = $(this).data('id');
+  var answer = confirm ("Bạn có chắc chắn muốn xóa tác giả này không ?");
+    if (answer)
+    {
+      $.get("function/delau.php",{id : id},function(data){
+          if (data==1) {
+            setTimeout(function(){
+                       window.location = 'index.php?page=danh-sach-tac-gia';
+                  }, 0);
+          }
+          else alert("Không xóa được tác giả !");
+      });
+    }
+  });
+})
+</script>
     <!-- AJAX Delete Category -->
 <script type="text/javascript">
 $(document).ready(function() { // Vì js này nằm trên đoạn html, nên phải đợi ready rồi mới add event click vào
@@ -171,6 +241,9 @@ $(document).ready(function() { // Vì js này nằm trên đoạn html, nên ph�
       switch ($id) {
         case 'them-sach':
           include("inc/addbook.php");
+          break;
+        case 'danh-sach-tac-gia':
+          include("inc/authorlist.php");
           break;
         case 'them-tac-gia':
           include("inc/addauthor.php");

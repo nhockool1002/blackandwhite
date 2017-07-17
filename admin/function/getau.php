@@ -1,0 +1,15 @@
+<?php
+include ("../../config/config.php");
+include ROOT."/function/func.php";
+spl_autoload_register("loadClass");
+$obj = new Db();
+
+$id = $_GET["id"];
+$sql = "SELECT * FROM author WHERE authorid ='$id'";
+
+
+$rows = $obj->select1($sql);
+$json= json_encode($rows);
+echo($json);
+die;
+?>
