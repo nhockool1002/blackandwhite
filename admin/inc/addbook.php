@@ -86,6 +86,14 @@
             </select>
             <br>
             <br>
+            <label><font color="red"><b><label>SÁCH BẢN QUYỀN</b></font></label>
+            <select class="form-control" id="pddvt" name="bookcredit">
+              <option value="0" selected="selected">-- Không </option>
+              <option value="1">-- Có </option>
+            </select>
+            </label>
+            <br>
+            <br>
           <center>
           <button type="submit" class="btn btn-primary" id="submit-btn" name="submit-btn">Thêm</button>
           <button type="reset" class="btn btn-danger">Xóa</button>
@@ -108,11 +116,12 @@
             $bookimg = $_FILES['bookimg']['name'];
             $booklink = $_POST['booklink'];
             $bookspecial = $_POST['bookspecial'];
+            $bookcredit = $_POST['bookcredit'];
 
             $target = ROOT."/upload/".$bookimg;
             $ins = new Db();
-            $sql = "INSERT INTO `books`(`bookname`,`des`, `author`, `catid`, `nxb`, `year`,`filename`,`link`, `spec`)
-                    VALUES ('$bookname','$bookdes' ,'$bookauthor' ,'$bookcat','$bookpublish','$bookyear', '$bookimg','$booklink','$bookspecial')";
+            $sql = "INSERT INTO `books`(`bookname`,`des`, `author`, `catid`, `nxb`, `year`,`filename`,`link`, `spec`, `credits`)
+                    VALUES ('$bookname','$bookdes' ,'$bookauthor' ,'$bookcat','$bookpublish','$bookyear', '$bookimg','$booklink','$bookspecial','$bookcredit')";
             $ins->select($sql);
             move_uploaded_file($_FILES['bookimg']['tmp_name'],$target);
 

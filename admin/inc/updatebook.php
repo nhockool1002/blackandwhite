@@ -12,6 +12,7 @@
   $bookyear = $row['year'];
   $booklink = $row['link'];
   $bookspecial = $row['spec'];
+  $bookcredit = $row['credits'];
 ?>
 
 <div id="page-wrapper">
@@ -97,6 +98,11 @@
             </select>
             <br>
             <br>
+            <label><font color="red"><b>SÁCH BẢN QUYỀN</b></font></label>
+            <select class="form-control" name="bookcredit">
+              <option value="0" <?php if($bookcredit == 0) echo "selected='selected'" ?>>-- Không </option>
+              <option value="1" <?php if($bookcredit == 1) echo "selected='selected'" ?>>-- Có </option>
+            </select>
           <center>
           <button type="submit" class="btn btn-primary" id="submit-btn" name="submit-btn">Sửa</button>
           <button type="reset" class="btn btn-danger">Xóa</button>
@@ -118,6 +124,7 @@
             $bookyear = $_POST['bookyear'];
             $booklink = $_POST['booklink'];
             $bookspecial = $_POST['bookspecial'];
+            $bookcredit = $_POST['bookcredit'];
 
 
             $ins = new Db();
@@ -129,11 +136,12 @@
                         `link`='$booklink',
                         `des`='$bookdes',
                         `catid`='$bookcat',
-                        `spec`='$bookspecial'
+                        `spec`='$bookspecial',
+                        `credits` = '$bookcredit'
                     WHERE bookid = '$id'";
             $ins->select($sql);
 
-            echo $target." <b><font color='green'> - Sách đã được sửa thành công</font></b>";
+            echo " <b><font color='green'> - Sách đã được sửa thành công</font></b>";
             header( "Refresh:2; url=index.php?page=danh-sach-sach");
           }
         ?>
