@@ -13,7 +13,7 @@
             <a class="nav-link first-item" href="index.php?page=test">Tài liệu<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link first-item" href="index.php?page=test">Tìm kiếm việc làm<span class="sr-only">(current)</span></a>
+            <a class="nav-link first-item" href="index.php?page=tin-tuyen-dung">Tìm kiếm việc làm<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link first-item" href="index.php">Kết nối bạn bè<span class="sr-only">(current)</span></a>

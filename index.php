@@ -30,6 +30,9 @@ session_start(); ?>
             else $id = "";
 
             switch ($id) {
+              case 'tin-tuyen-dung':
+                require_once("include/recruite.php");
+                break;
               case 'xem-sach':
                 require_once("include/viewbook.php");
                 break;
