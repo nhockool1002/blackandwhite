@@ -15,7 +15,7 @@ $rows = $obj->select($sql);
       ?>
       <div class="col-sm-4">
           <div class="col-sm-12 tieudetd">
-            <?php echo $row['rtit']; ?>
+            <a href="index.php?page=xem-tin-tuyen-dung&idtd=<?php echo $row['rid']; ?>"><?php echo $row['rtit']; ?></a>
           </div>
           <div class="col-sm-12 ndtuyendung">
             <?php echo $row['rdes']; ?>

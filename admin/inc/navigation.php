@@ -135,7 +135,7 @@
                         <a href="index.php?page=them-sach"><i class="glyphicon glyphicon-share"></i> Thêm sách mới</a>
                     </li>
                     <li>
-                        <a href="index.php?page=statcat"><i class="glyphicon glyphicon-share"></i> Thông kê sách</a>
+                        <a href="index.php?page=statcat"><i class="glyphicon glyphicon-share"></i> Hướng dẫn thêm sách</a>
                     </li>
                 </ul>
             </li>
@@ -181,6 +181,20 @@
                     </li>
                     <li>
                         <a href="#"><i class="glyphicon glyphicon-share"></i> RSS</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo12"><i class="glyphicon glyphicon-road"></i> Quản lý tin tuyển dụng<i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="demo12" class="collapse">
+                    <li>
+                        <a href="index.php?page=quan-li-tuyen-dung"><i class="glyphicon glyphicon-share"></i> Danh sách tuyển dụng</a>
+                    </li>
+                    <li>
+                        <a href="index.php?page=them-tin-tuyen-dung"><i class="glyphicon glyphicon-share"></i> Thêm tin tuyển dụng</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i> Hướng dẫn đăng tin</a>
                     </li>
                 </ul>
             </li>

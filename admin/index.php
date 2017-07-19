@@ -173,6 +173,26 @@ $(document).ready(function() { // Vì js này nằm trên đoạn html, nên ph�
   });
 })
 </script>
+<!-- AJAX Delete Recruite -->
+<script type="text/javascript">
+$(document).ready(function() { // Vì js này nằm trên đoạn html, nên phải đợi ready rồi mới add event click vào
+$(".deltd").click(function() {
+var id = $(this).data('id');
+var answer = confirm ("Bạn có chắc chắn muốn xóa tin này không ?");
+if (answer)
+{
+  $.get("function/deltd.php",{id : id},function(data){
+      if (data==1) {
+        setTimeout(function(){
+                   window.location = 'index.php?page=quan-li-tuyen-dung';
+              }, 0);
+      }
+      else alert("Không xóa được tin !");
+  });
+}
+});
+})
+</script>
 <!-- AJAX CHECK NAME CATEGORY -->
 <script>
     $(document).ready(function() {
@@ -259,6 +279,15 @@ $(document).ready(function() { // Vì js này nằm trên đoạn html, nên ph�
       }
       else $id = "";
       switch ($id) {
+        case 'them-tin-tuyen-dung':
+          include("inc/recruiteadd.php");
+          break;
+        case 'sua-tin-tuyen-dung':
+          include("inc/recruiteupdate.php");
+          break;
+        case 'quan-li-tuyen-dung':
+          include("inc/recruiteadmin.php");
+          break;
         case 'sua-sach':
           include("inc/updatebook.php");
           break;
