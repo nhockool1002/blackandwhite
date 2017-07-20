@@ -185,6 +185,20 @@
                 </ul>
             </li>
             <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo1z"><i class="glyphicon glyphicon-gift"></i> Quản lý học bổng<i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="demo1z" class="collapse">
+                    <li>
+                        <a href="index.php?page=quan-li-hoc-bong"><i class="glyphicon glyphicon-share"></i> Danh sách học bổng</a>
+                    </li>
+                    <li>
+                        <a href="index.php?page=them-tin-hoc-bong"><i class="glyphicon glyphicon-share"></i> Thêm học bỗng</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i> Hướng dẫn đăng học bỗng</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo12"><i class="glyphicon glyphicon-road"></i> Quản lý tin tuyển dụng<i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo12" class="collapse">
                     <li>

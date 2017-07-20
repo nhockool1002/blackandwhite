@@ -30,6 +30,12 @@ session_start(); ?>
             else $id = "";
 
             switch ($id) {
+              case 'xem-tin-hoc-bong':
+                require_once("include/read-scholarship.php");
+                break;
+              case 'tin-hoc-bong':
+                require_once("include/scholarship.php");
+                break;
               case 'xem-tin-tuyen-dung':
                 require_once("include/read-recruite.php");
                 break;

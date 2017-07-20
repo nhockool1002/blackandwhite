@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 19, 2017 lúc 07:43 CH
--- Phiên bản máy phục vụ: 10.1.21-MariaDB
--- Phiên bản PHP: 5.6.30
+-- Thời gian đã tạo: Th7 20, 2017 lúc 12:22 PM
+-- Phiên bản máy phục vụ: 10.1.25-MariaDB
+-- Phiên bản PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -114,6 +116,26 @@ INSERT INTO `recruite` (`rid`, `rtit`, `rdes`, `rct`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `scholarship`
+--
+
+CREATE TABLE `scholarship` (
+  `sid` int(100) NOT NULL,
+  `stit` varchar(255) NOT NULL,
+  `sdes` text NOT NULL,
+  `sct` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `scholarship`
+--
+
+INSERT INTO `scholarship` (`sid`, `stit`, `sdes`, `sct`) VALUES
+(1, 'Học bổng “Người bạn đồng hành” dành cho sinh viên khuyết tật', '1. Mục đích chương trình\r\nChuơng trình Học bổng Người bạn đồng hành tạo thêm điều kiện học tập và phát triển cho sinh viên khuyết tật, đồng thời giúp các em ý thức được quyền lợi và trách nhiệm của mình trong xã hội.....', '<div id=\"noidungcopy\" class=\"gioithieu font13\">\r\n<p class=\"sizeable\"><strong><em>Giới thiệu về học bổng “Người bạn đồng hành” </em></strong><strong><em>dành cho</em></strong></p>\r\n<p class=\"sizeable\"><strong><em>sinh viên khuyết tật</em></strong></p>\r\n<p class=\"sizeable\"><strong>1. Mục đích chương trình</strong></p>\r\n<p class=\"sizeable\">Chuơng trình Học bổng Người bạn đồng hành tạo thêm điều kiện học tập và phát triển cho sinh viên khuyết tật, đồng thời giúp các em ý thức được quyền lợi và trách nhiệm của mình trong xã hội.</p>\r\n<p class=\"sizeable\">DRD tin rằng khi có được cơ hội học tập, người khuyết tật (NKT) sẽ:</p>\r\n<p class=\"sizeable\">- Biết cách cư xử chuẩn mực và hoàn thiện nhân cách.</p>\r\n<p class=\"sizeable\">- Mở rộng tầm nhìn, có kỹ năng sống, tự tin hơn vào năng lực cá nhân.</p>\r\n<p class=\"sizeable\">- Có cơ hội tự khẳng định mình, từ đó góp phần thay đổi cách nhìn chung của cộng đồng đối với khả năng của NKT.</p>\r\n<p class=\"sizeable\">- Tìm được việc làm phù hợp với khả năng, ổn định cuộc sống bản thân, phụ giúp gia đình, giúp ích cho cộng đồng và đóng góp phần vào sự phát triển chung của đất nuớc.</p>\r\n<p class=\"sizeable\"><strong>2. Tác động của chương trình</strong></p>\r\n<p class=\"sizeable\">- Sinh viên khuyết tật nhận học bổng đồng thời có được cơ hội để hiểu thêm triết lý sống “mình vì mọi người, mọi người vì mình”, được trang bị thêm kiến thức về lĩnh vực khuyết tật và kỹ năng sống thông qua những buổi sinh hoạt với DRD. Sau khi sinh viên ra trường, DRD sẽ giúp sinh viên tiếp cận với các cơ hội việc làm thông qua mạng lưới mà DRD vẫn đang phát triển.</p>\r\n<p class=\"sizeable\">- Ngoài ra, sinh viên khuyết tật còn được thử sức với vai trò tham gia tổ chức các chương trình chia sẻ kỹ năng cho các bạn sinh viên khuyết tật khác góp phần nâng cao sự tự tin và năng lực hòa nhập xã hội</p>\r\n<p class=\"sizeable\"><strong>3. Đối tượng nhận học bổng</strong></p>\r\n<p class=\"sizeable\">- <em><strong>Sinh viên khuyết tật</strong></em> đang theo học tại các trường <em><strong>Đại học, Cao đẳng trên địa bàn TP. HCM</strong></em>.</p>\r\n<p class=\"sizeable\">- Học lực từ 6,5 trở lên (đối với sinh viên năm 2 trở lên) và điểm học bạ từ 7,0 trở lên (đối với sinh viên năm 1).</p>\r\n<p class=\"sizeable\">- Đồng ý để DRD đưa thông tin cá nhân liên quan lên mục Học bổng DRD trên trang web DRD.</p>\r\n<p class=\"sizeable\"><strong>4. Tiêu chí lựa chọn</strong></p>\r\n<p class=\"sizeable\">- Gặp khó khăn về tài chính.</p>\r\n<p class=\"sizeable\">- Có kế hoạch, mục tiêu học tập rõ ràng.</p>\r\n<p class=\"sizeable\">- Có tinh thần cộng đồng/ biết vì người khác.</p>\r\n<p class=\"sizeable\"><em><strong>Ưu tiên:</strong></em> Nữ, vùng sâu vùng xa, dân tộc thiểu số.</p>\r\n<p class=\"sizeable\"><strong>5. Mức học bổng</strong></p>\r\n<p class=\"sizeable\">Trợ cấp hàng tháng: Có 2 mức hỗ trợ cho từng trường hợp của sinh viên khuyết tật:</p>\r\n<p class=\"sizeable\">1 triệu đồng và 500 ngàn đồng.</p>\r\n<p class=\"sizeable\"><strong>6. Thời gian nộp hồ sơ</strong></p>\r\n<p class=\"sizeable\">Mỗi năm, DRD có 2 đợt nhận hồ sơ và xét học bổng:</p>\r\n<p class=\"sizeable\">- Đợt 1: Từ 1/4 đến 30/5 nhận. 30/6 hạn thông báo kết quả</p>\r\n<p class=\"sizeable\">- Đợt 2: Từ 1/10 đến 30/11 nhận. 30/12 hạn thông báo kết quả</p>\r\n<p class=\"sizeable\"><strong>7. Xét duy trì</strong></p>\r\n<p class=\"sizeable\">Đối với những sinh viên khuyết tật đã được nhận học bổng, ở những năm sau đó, các bạn không cần làm lại hồ sơ. Tuy nhiên, sinh viên phải gửi bảng điểm ngay khi có kết quả của từng học kỳ để chương trình xét quyết định tiếp tục trao học bổng hoặc dừng.</p>\r\n<p class=\"sizeable\"><strong>8. Yêu cầu khi nhận học bổng</strong></p>\r\n<p class=\"sizeable\">- Gửi báo cáo đều đặn (3 tháng/lần).</p>\r\n<p class=\"sizeable\">- Thái độ hợp tác và giữ liên hệ với nhóm học bổng thường xuyên.</p>\r\n<p class=\"sizeable\">- Tham gia (có thể lựa chọn) các hoạt động thể hiện tinh thần, trách nhiệm xã hội: dạy kèm cho trẻ khuyết tật, tham gia tổ chức các sự kiện, hỗ trợ các bạn sinh viên khuyết tật khác…</p>\r\n<p class=\"sizeable\"><strong>9. Hồ sơ bao gồm</strong></p>\r\n<p class=\"sizeable\">- Đơn xét Học bổng người bàn đồng hành, gồm: Thông tin cá nhân và hoàn cảnh gia đình, qua một trong hai cách sau:</p>\r\n<p class=\"sizeable\">o Hoàn thành mẫu đính kèm (<a class=\"sizeable\" href=\"http://www.drdvietnam.org/images/hinh%20tin/2017/03/DRD_Mau_don_xin_Hoc_bong_NBDH.docx\">>> Tải mẫu đơn tại đây</a>)</p>\r\n<p class=\"sizeable\">o Link đăng ký: <a class=\"sizeable\" href=\"http://www.google.com/url?q=http%3A%2F%2Fbit.ly%2Fhocbongnguoibandonghanh&sa=D&sntz=1&usg=AFQjCNFl8gu0QHRk7Bmtbp8U8FIM1fB2Vw\">http://bit.ly/hocbongnguoibandonghanh</a></p>\r\n<p class=\"sizeable\">- Bảng điểm kết quả học tập tổng hợp các học kỳ có dấu mộc nhà trường (đối với sinh viên năm 2 trở lên).</p>\r\n<p class=\"sizeable\">- Photo học bạ Trung học phổ thông và giấy báo trúng tuyển (đối với sinh viên năm 1 nếu chưa có bảng điểm).</p>\r\n<p class=\"sizeable\">- Photo giấy chứng nhận hộ cận nghèo, hộ nghèo hoặc giấy xác nhận gia đình khó khăn về kinh tế (nếu có).</p>\r\n<p class=\"sizeable\">- Một tấm ảnh toàn thân, nhìn rõ mặt và dạng khuyết tật.</p>\r\n<p class=\"sizeable\"><strong>10. Thông tin liên hệ</strong></p>\r\n<p class=\"sizeable\"><em><strong>Người phụ trách:</strong></em> Phan Thị Rát</p>\r\n<p class=\"sizeable\"><em><strong>Số điện thoại:</strong> </em>08 6267 9911 (nhánh 114) hoặc: 0126 459 8210</p>\r\n<p class=\"sizeable\">Hình thức nộp hồ sơ</p>\r\n<p class=\"sizeable\">Vui lòng gửi qua email hoặc bưu điện:</p>\r\n<p class=\"sizeable\">Email: <a class=\"sizeable\" href=\"mailto:ratphan@drdvietnam.com\">ratphan@drdvietnam.com</a></p>\r\n<p class=\"sizeable\">Địa chỉ: 311K8 Khu nhà tái định cư Thủ Thiêm, P. An Phú, Q. 2, Tp. HCM</p>\r\n<p class=\"sizeable\"><em><strong>Để thuận tiện và tiết kiệm thời gian, chi phí cho các bạn sinh viên, chúng tôi khuyến khích gửi bằng email và đăng ký thông tin qua link đăng ký trên.</strong></em></p>\r\n</div>');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `users`
 --
 
@@ -164,6 +186,12 @@ ALTER TABLE `recruite`
   ADD PRIMARY KEY (`rid`);
 
 --
+-- Chỉ mục cho bảng `scholarship`
+--
+ALTER TABLE `scholarship`
+  ADD PRIMARY KEY (`sid`);
+
+--
 -- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
@@ -194,6 +222,11 @@ ALTER TABLE `category`
 ALTER TABLE `recruite`
   MODIFY `rid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
+-- AUTO_INCREMENT cho bảng `scholarship`
+--
+ALTER TABLE `scholarship`
+  MODIFY `sid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
@@ -208,6 +241,7 @@ ALTER TABLE `users`
 ALTER TABLE `books`
   ADD CONSTRAINT `books_ibfk_1` FOREIGN KEY (`catid`) REFERENCES `category` (`catid`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `books_ibfk_2` FOREIGN KEY (`author`) REFERENCES `author` (`authorid`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

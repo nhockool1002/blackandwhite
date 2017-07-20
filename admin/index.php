@@ -173,6 +173,26 @@ $(document).ready(function() { // Vì js này nằm trên đoạn html, nên ph�
   });
 })
 </script>
+<!-- AJAX Delete Scholarship -->
+<script type="text/javascript">
+$(document).ready(function() { // Vì js này nằm trên đoạn html, nên phải đợi ready rồi mới add event click vào
+$(".delhb").click(function() {
+var id = $(this).data('id');
+var answer = confirm ("Bạn có chắc chắn muốn xóa tin này không ?");
+if (answer)
+{
+  $.get("function/delhb.php",{id : id},function(data){
+      if (data==1) {
+        setTimeout(function(){
+                   window.location = 'index.php?page=quan-li-hoc-bong';
+              }, 0);
+      }
+      else alert("Không xóa được tin !");
+  });
+}
+});
+})
+</script>
 <!-- AJAX Delete Recruite -->
 <script type="text/javascript">
 $(document).ready(function() { // Vì js này nằm trên đoạn html, nên phải đợi ready rồi mới add event click vào
@@ -279,6 +299,17 @@ if (answer)
       }
       else $id = "";
       switch ($id) {
+        case 'them-tin-hoc-bong':
+          include("inc/scholarshipadd.php");
+          break;
+        case 'sua-tin-hoc-bong':
+          include("inc/scholarshipedit.php");
+          break;
+        case 'quan-li-hoc-bong':
+          include("inc/scholarshipad.php");
+          break;
+
+
         case 'them-tin-tuyen-dung':
           include("inc/recruiteadd.php");
           break;

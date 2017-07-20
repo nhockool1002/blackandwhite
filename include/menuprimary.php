@@ -19,7 +19,7 @@
             <a class="nav-link first-item" href="index.php">Kết nối bạn bè<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link first-item" href="index.php">Học bổng<span class="sr-only">(current)</span></a>
+            <a class="nav-link first-item" href="index.php?page=tin-hoc-bong">Học bổng<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link first-item" href="index.php">Nhà tài trợ<span class="sr-only">(current)</span></a>
