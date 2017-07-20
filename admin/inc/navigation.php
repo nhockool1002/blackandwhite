@@ -140,6 +140,17 @@
                 </ul>
             </li>
             <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demor4"><i class="glyphicon glyphicon-user"></i> Quản lý Thành viên <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="demor4" class="collapse">
+                    <li>
+                        <a href="index.php?page=quan-li-thanh-vien"><i class="glyphicon glyphicon-share"></i> Danh sách Thành viên</a>
+                    </li>
+                    <li>
+                        <a href="index.php?page=them-thanh-vien"><i class="glyphicon glyphicon-share"></i> Thêm thành viên mới</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="glyphicon glyphicon-send"></i> Quản lý Danh mục <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo1" class="collapse">
                     <li>
