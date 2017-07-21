@@ -176,26 +176,6 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="	glyphicon glyphicon-flash"></i> Quản lý Liên kết<i class="fa fa-fw fa-caret-down"></i></a>
-                <ul id="demo" class="collapse">
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> Facebook</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> Youtube</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> Skype</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> RSS</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo1z"><i class="glyphicon glyphicon-gift"></i> Quản lý học bổng<i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo1z" class="collapse">
                     <li>

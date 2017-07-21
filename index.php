@@ -8,8 +8,114 @@ session_start(); ?>
     require_once("include/connect.php");
     require_once("include/header.php");
     ?>
+
+    <style media="screen">
+    #fixNav{
+    width: 100%;
+    height: 35px;
+    background-color: #000;
+    display: none;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.5); /*Đổ bóng cho menu*/
+    position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
+    top: 0; /*Nằm trên cùng*/
+    left: 0; /*Nằm sát bên trái*/
+    z-index: 100000; /*Hiển thị lớp trên cùng*/
+  }
+  #fixNav ul{
+    margin: 0;
+    padding: 0;
+  }
+  #fixNav ul li{
+    list-style:none inside;
+    width: auto;
+    float: left;
+    line-height: 35px; /*Cho text canh giữa menu*/
+    color: #fff;
+    padding: 0;
+    margin-right:10px;
+    position: relative;
+  }
+  #fixNav ul li a{
+    text-transform: uppercase;
+    white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
+    padding: 0 10px;
+    color: #fff;
+    display: block;
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+  /*CSS Style cho Submenu*/
+  #fixNav ul li ul {
+    position: absolute;
+    width: auto;
+    display: none;
+    background-color: #252525;
+    border-bottom: 3px solid #0082bb;
+    padding-left: 5px;
+  }
+
+  #fixNav ul li ul li{
+    display: block;
+    padding:0;
+    margin: 0;
+    float: none; /*Bỏ float cho li cấp thứ 2*/
+  }
+  /* Hover cho submenu */
+  #fixNav ul li:hover {
+    /* Hover thì li sẽ đổi màu*/
+    background-color: #252525;
+  }
+  #fixNav ul li:hover ul{
+    /*Display ra submenu*/
+    display: block;
+  }
+
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function($) {
+        //selector đến menu cần làm việc
+        var TopFixMenu = $("#fixNav");
+        // dùng sự kiện cuộn chuột để bắt thông tin đã cuộn được chiều dài là bao nhiêu.
+        $(window).scroll(function(){
+          // Nếu cuộn được hơn 150px rồi
+      if($(this).scrollTop()>150){
+        // Tiến hành show menu ra
+      TopFixMenu.show();
+      }else{
+        // Ngược lại, nhỏ hơn 150px thì hide menu đi.
+          TopFixMenu.hide();
+      }}
+  )
+})
+    </script>
   </head>
   <body>
+    <?php if(isset($_SESSION['bawuser'])) { ?>
+
+    <nav id="fixNav">
+  <ul>
+    <li>BLACKANDWHITE</li>
+    <li>
+      <a href="#">Bảng điều khiển</a>
+      <ul class="sub-menu">
+        <li><a href="#">Đổi mật khẩu</a></li>
+        <li><a href="#">Đóng góp ý kiến</a></li>
+        <li><a href="#">Báo cáo tài liệu vi phạm</a></li>
+     </ul>
+    </li>
+    <li><a href="#">Tải lên</a></li>
+    <li>
+      <a href="#">Tài liệu</a>
+      <ul class="sub-menu">
+        <li><a href="#">Tài liệu đã tải lên</a></li>
+        <li><a href="#">Quản lí tài liệu</a></li>
+     </ul>
+    </li>
+    <li><a href="index.php?page=dang-xuat">Log Out</a></li>
+  </ul>
+</nav>
+
+<?php } ?>
     <?php
     require_once("include/banner.php");
     require_once("include/menuprimary.php");
