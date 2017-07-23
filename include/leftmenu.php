@@ -11,7 +11,7 @@
 
     ?>
     <li class="nav-item">
-       <a href="index.php?danh-muc=<?php echo $row['catnameseo']; ?>" class="nav-link"><span class="glyphicon glyphicon-th"></span>⏏ <?php echo $row['catname']; ?></a>
+       <a href="index.php?danh-muc=<?php echo $row['catnameseo']; ?>&id=<?php echo $row['catid']; ?>" class="nav-link"><span class="glyphicon glyphicon-th"></span>⏏ <?php echo $row['catname']; ?></a>
     </li>
     <?php } ?>
   </ul>

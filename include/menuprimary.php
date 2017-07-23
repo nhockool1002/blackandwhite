@@ -16,9 +16,6 @@
             <a class="nav-link first-item" href="index.php?page=tin-tuyen-dung">Tìm kiếm việc làm<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link first-item" href="index.php">Kết nối bạn bè<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
             <a class="nav-link first-item" href="index.php?page=tin-hoc-bong">Học bổng<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
@@ -28,7 +25,8 @@
             <a class="nav-link first-item" href="index.php">Liên hệ<span class="sr-only">(current)</span></a>
           </li>
           <form class="form-inline text-sm-right searchbox">
-              <input class="form-control" type="text" placeholder="Search" style="width:200px;">
+              <input class="form-control" type="text" placeholder="Tác giả, Keywork" style="width:200px;">
+              <a style="color:white;" href="">Tìm</a>
           </form>
         </ul>
       </nav>

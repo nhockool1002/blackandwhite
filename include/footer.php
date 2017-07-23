@@ -58,13 +58,6 @@
                 </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-12 contactme">
-              <span style="color:black;font-style:italic;">"Black and White" &copy; 2017 Reserved</span><br>
-              <span>Templates and Coding by Nguyễn Minh Nhựt</span><br>
-              <span>Contact me via email nhut.nguyenminh.it@gmail.com</span>
-            </div>
-          </div>
         </div>
     </div>
   </div>

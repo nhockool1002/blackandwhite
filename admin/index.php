@@ -24,6 +24,12 @@
       }
       else $id = "";
       switch ($id) {
+        case 'duyet-tai-lieu':
+          include("inc/docapproval.php");
+          break;
+        case 'tai-lieu-cho-duyet':
+          include("inc/docwaiting.php");
+          break;
         case 'sua-thanh-vien':
           include("inc/memberedit.php");
           break;

@@ -204,10 +204,10 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo4"><i class="glyphicon glyphicon-fire"></i> Quản lý Góp ý <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo4"><i class="glyphicon glyphicon-fire"></i> Quản lý Báo cáo <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo4" class="collapse">
                     <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> Danh sách Góp ý</a>
+                        <a href="#"><i class="glyphicon glyphicon-share"></i> Danh sách Báo cáo</a>
                     </li>
                 </ul>
             </li>
@@ -215,10 +215,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo5"><i class="glyphicon glyphicon-screenshot"></i> Quản lý Upload <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo5" class="collapse">
                     <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> Tài liệu chờ Duyệt</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> Tài liệu đã Duyệt</a>
+                        <a href="index.php?page=tai-lieu-cho-duyet"><i class="glyphicon glyphicon-share"></i> Tài liệu chờ Duyệt</a>
                     </li>
                 </ul>
             </li>

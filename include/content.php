@@ -7,7 +7,13 @@
       <div class="card-deck-wrapper">
         <div class="card-deck">
           <?php
+            if(!isset($_GET['id'])){
             $sql = "SELECT * FROM books INNER JOIN author ON books.author = author.authorid WHERE credits =0";
+            }
+            else{
+              $id = $_GET['id'];
+              $sql = "SELECT * FROM books INNER JOIN author ON books.author = author.authorid WHERE credits =0 AND catid='$id'";
+            }
             $obj = new Db();
             $rows = $obj->select($sql);
             foreach ($rows as $row) {

@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 20, 2017 lúc 12:22 PM
--- Phiên bản máy phục vụ: 10.1.25-MariaDB
--- Phiên bản PHP: 5.6.31
+-- Thời gian đã tạo: Th7 24, 2017 lúc 01:46 SA
+-- Phiên bản máy phục vụ: 10.1.21-MariaDB
+-- Phiên bản PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -66,8 +64,8 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`bookid`, `bookname`, `author`, `nxb`, `year`, `filename`, `link`, `des`, `catid`, `spec`, `credits`) VALUES
-(3, 'CÁC HỌC THUYẾT TÂM LÝ NHÂN CÁCH', 2, 'Trống', 0, 'Cachocthuyettamlynhancach-NguyenThoSinh.png', '<iframe src=\"https://docs.google.com/document/d/1aXkrpWW8Pn0jFrZ5ig9t_LBZzOBBVf7iwoyq4YHTpy0/pub?embedded=true\"></iframe>', 'Trong các chuyên ngành Tâm lý học có ở ta, tâm lý học nhân cách là chuyên ngành non trẻ nhất. Mà chẳng phải chỉ ở ta mới như vậy, như chính trong nội dung cuốn sách này cũng cho ta thấy, đó cũng là tình trạng chung của tâm lý học thế giới.', 1, 1, 0),
-(4, 'CÁC THỰC NGHIỆM TRONG TÂM LÝ HỌC XÃ HỘI', 3, 'Trống', 0, 'dadas.png', '<iframe src=\"https://docs.google.com/document/d/1twnugoKJRA9Ph-9SYUX_NA4H-YU1es38caL4G0IvDGE/pub?embedded=true\"></iframe>', 'Trong hơn một thể kỉ qua, đã có nhiều thực nghiệm trong tâm lí học xã hội được tiến hành. Những thực nghiệm này không chỉ góp phần xây dựng cơ sở lí luận cho tâm lí học xã hội, mà nó còn giải quyết những vấn đề tâm lí nảy sinh trong đời sống xã hội thuộc các lĩnh vực khác nhau.', 1, 1, 0);
+(3, 'Các học thuyết tâm lý nhân cách', 2, 'Trống', 0, 'Cachocthuyettamlynhancach-NguyenThoSinh.png', '<iframe src=\"https://docs.google.com/document/d/1aXkrpWW8Pn0jFrZ5ig9t_LBZzOBBVf7iwoyq4YHTpy0/pub?embedded=true\"></iframe>', 'Trong các chuyên ngành Tâm lý học có ở ta, tâm lý học nhân cách là chuyên ngành non trẻ nhất. ', 1, 1, 0),
+(4, 'Các thực nghiệm trong tâm lý học xã hội', 3, 'Trống', 0, 'dadas.png', '<iframe src=\"https://docs.google.com/document/d/1twnugoKJRA9Ph-9SYUX_NA4H-YU1es38caL4G0IvDGE/pub?embedded=true\"></iframe>', 'Trong hơn một thể kỉ qua, đã có nhiều thực nghiệm trong tâm lí học xã hội được tiến hành. ', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -89,6 +87,60 @@ INSERT INTO `category` (`catid`, `catname`, `catnameseo`) VALUES
 (1, 'Tâm lý', 'tam-ly'),
 (2, 'Nước ngoài', 'nuoc-ngoai'),
 (3, 'Toán học', 'toan-hoc');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `link`
+--
+
+CREATE TABLE `link` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `link`
+--
+
+INSERT INTO `link` (`id`, `name`, `url`) VALUES
+(1, 'facebook', 'https://www.facebook.com/godfather.1995'),
+(2, 'youtube', 'https://www.youtube.com/channel/UCginJHE0MRB9npdKPK8uSIA'),
+(3, 'skype', ''),
+(4, 'twitter', ''),
+(5, 'rss', ''),
+(6, 'link1', ''),
+(7, 'link2', ''),
+(8, 'link3', ''),
+(9, 'link4', ''),
+(10, 'link5', ''),
+(11, 'link6', ''),
+(12, 'link7', ''),
+(13, 'link8', ''),
+(14, 'link9', '');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `memup`
+--
+
+CREATE TABLE `memup` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `des` text NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `iduser` int(10) NOT NULL,
+  `stt` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `memup`
+--
+
+INSERT INTO `memup` (`id`, `name`, `des`, `link`, `iduser`, `stt`) VALUES
+(3, 'test', 'test', 'test', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -180,6 +232,19 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`catid`);
 
 --
+-- Chỉ mục cho bảng `link`
+--
+ALTER TABLE `link`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `memup`
+--
+ALTER TABLE `memup`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `iduser` (`iduser`);
+
+--
 -- Chỉ mục cho bảng `recruite`
 --
 ALTER TABLE `recruite`
@@ -217,15 +282,25 @@ ALTER TABLE `books`
 ALTER TABLE `category`
   MODIFY `catid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT cho bảng `link`
+--
+ALTER TABLE `link`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT cho bảng `memup`
+--
+ALTER TABLE `memup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT cho bảng `recruite`
 --
 ALTER TABLE `recruite`
-  MODIFY `rid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `rid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT cho bảng `scholarship`
 --
 ALTER TABLE `scholarship`
-  MODIFY `sid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `sid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
@@ -241,7 +316,12 @@ ALTER TABLE `users`
 ALTER TABLE `books`
   ADD CONSTRAINT `books_ibfk_1` FOREIGN KEY (`catid`) REFERENCES `category` (`catid`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `books_ibfk_2` FOREIGN KEY (`author`) REFERENCES `author` (`authorid`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
+
+--
+-- Các ràng buộc cho bảng `memup`
+--
+ALTER TABLE `memup`
+  ADD CONSTRAINT `memup_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `users` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

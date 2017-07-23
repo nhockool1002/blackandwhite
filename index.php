@@ -95,20 +95,11 @@ session_start(); ?>
     <nav id="fixNav">
   <ul>
     <li>BLACKANDWHITE</li>
-    <li>
-      <a href="#">Bảng điều khiển</a>
-      <ul class="sub-menu">
-        <li><a href="#">Đổi mật khẩu</a></li>
-        <li><a href="#">Đóng góp ý kiến</a></li>
-        <li><a href="#">Báo cáo tài liệu vi phạm</a></li>
-     </ul>
-    </li>
-    <li><a href="#">Tải lên</a></li>
+    <li><a href="index.php?page=upload">Tải lên</a></li>
     <li>
       <a href="#">Tài liệu</a>
       <ul class="sub-menu">
-        <li><a href="#">Tài liệu đã tải lên</a></li>
-        <li><a href="#">Quản lí tài liệu</a></li>
+        <li><a href="index.php?page=upload-manager">Quản lí tài liệu</a></li>
      </ul>
     </li>
     <li><a href="index.php?page=dang-xuat">Log Out</a></li>
@@ -136,6 +127,12 @@ session_start(); ?>
             else $id = "";
 
             switch ($id) {
+              case 'upload-manager':
+                require_once("include/upload-manager.php");
+                break;
+              case 'upload':
+                require_once("include/uploaddoc.php");
+                break;
               case 'xem-tin-hoc-bong':
                 require_once("include/read-scholarship.php");
                 break;
