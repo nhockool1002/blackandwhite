@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 24, 2017 lúc 01:46 SA
+-- Thời gian đã tạo: Th7 25, 2017 lúc 02:41 SA
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 5.6.30
 
@@ -195,17 +195,20 @@ CREATE TABLE `users` (
   `userid` int(10) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `confirm` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`userid`, `username`, `password`, `email`) VALUES
-(1, 'admin', '6ac66b5cb3d198e4587a747c13ac3c9d', 'admin@blackandwhite.org'),
-(2, 'support', 'fc7f6bae545704a1ab737f3ad0b8d656', 'support@blackandwhite.org'),
-(3, 'bientap1', '202cb962ac59075b964b07152d234b70', 'bientap@blackandwhite.org');
+INSERT INTO `users` (`userid`, `username`, `password`, `email`, `confirm`) VALUES
+(1, 'admin', '6ac66b5cb3d198e4587a747c13ac3c9d', 'admin@blackandwhite.org', 1),
+(2, 'support', 'fc7f6bae545704a1ab737f3ad0b8d656', 'support@blackandwhite.org', 1),
+(3, 'bientap1', '202cb962ac59075b964b07152d234b70', 'bientap@blackandwhite.org', 1),
+(5, 'nhockool100', '6ac66b5cb3d198e4587a747c13ac3c9d', 'kangtadragon@gmail.com', 1),
+(6, 'testing1', 'e10adc3949ba59abbe56e057f20f883e', 'testing@mgial.com', 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -305,7 +308,7 @@ ALTER TABLE `scholarship`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Các ràng buộc cho các bảng đã đổ
 --

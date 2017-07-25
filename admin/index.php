@@ -1,6 +1,7 @@
 <?php
   ob_start();
   session_start();
+
   include ("../config/config.php");
   include ROOT."/function/func.php";
   spl_autoload_register("loadClass");
@@ -15,7 +16,7 @@
     ?>
   </head>
   <body>
-
+    <?php if(isset($_SESSION['bawuser'])){ ?>
     <div id="wrapper"> <!-- START WRAPPER -->
       <?php
       include("inc/navigation.php");
@@ -90,3 +91,8 @@
     </div> <!-- END WRAPPER -->
   </body>
 </html>
+
+<?php }
+else echo "<div class='alert alert-danger' role='alert'>
+  <strong>Please Login With Admin Account for do somthing!</strong>- Click <a href='../index.php?page=dang-nhap' class='alert-link'>HERE</a> to go to login page .
+</div>" ?>

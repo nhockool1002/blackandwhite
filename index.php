@@ -103,6 +103,9 @@ session_start(); ?>
      </ul>
     </li>
     <li><a href="index.php?page=dang-xuat">Log Out</a></li>
+    <?php if(isset($_SESSION['bawuser']) && $_SESSION['bawuser'] == 'admin') {?>
+      <li><a href="admin/">AdminCP</a></li>
+      <?php } ?>
   </ul>
 </nav>
 
@@ -127,6 +130,9 @@ session_start(); ?>
             else $id = "";
 
             switch ($id) {
+              case 'tim-kiem':
+                require_once("include/find.php");
+                break;
               case 'upload-manager':
                 require_once("include/upload-manager.php");
                 break;
