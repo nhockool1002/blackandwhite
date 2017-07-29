@@ -13,6 +13,7 @@
   $booklink = $row['link'];
   $bookspecial = $row['spec'];
   $bookcredit = $row['credits'];
+  $bookdownload = $row['download'];
 ?>
 
 <div id="page-wrapper">
@@ -91,6 +92,11 @@
             <small class="text-muted">*Liên kết [iframe] được publish từ Google Docs</small>
             <br>
             <br>
+            <label for="pdprice">Liên kết tải tài liệu</label>  <label class="label label-warning"> * Important</label>
+                  <input type="text" class="form-control" id="pdprice" placeholder="Nhập giá sản phẩm" name="bookdownload" value='<?php echo $bookdownload; ?>'>
+                  <small class="text-muted">*Liên kết tải về từ Google Drive</small>
+                  <br>
+                  <br>
             <label>Sách nổi bật</label>
             <select class="form-control" id="pddvt" name="bookspecial">
               <option value="0" <?php if($bookspecial == 0) echo "selected='selected'" ?>>-- Không </option>
@@ -125,6 +131,7 @@
             $booklink = $_POST['booklink'];
             $bookspecial = $_POST['bookspecial'];
             $bookcredit = $_POST['bookcredit'];
+            $bookdownload = $_POST['bookdownload'];
 
 
             $ins = new Db();
@@ -137,7 +144,9 @@
                         `des`='$bookdes',
                         `catid`='$bookcat',
                         `spec`='$bookspecial',
-                        `credits` = '$bookcredit'
+                        `credits` = '$bookcredit',
+                        `download` = '$bookdownload'
+
                     WHERE bookid = '$id'";
             $ins->select($sql);
 

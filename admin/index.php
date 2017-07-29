@@ -25,6 +25,9 @@
       }
       else $id = "";
       switch ($id) {
+        case 'huong-dan-them-sach':
+          include("inc/addbooktuts.php");
+          break;
         case 'duyet-tai-lieu':
           include("inc/docapproval.php");
           break;

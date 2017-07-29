@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   $configDB = array();
   $configDB["host"]         =       "localhost";
   $configDB["database"]     =       "blackandwhite";
@@ -9,7 +9,7 @@
   define("DB_NAME", "blackandwhite");
   define("DB_USER", "root");
   define("DB_PASS", "");
-  define("ROOT", "D:/Dev/Software/xampp/htdocs/blackandwhite");
+  define("ROOT", "C:/xampp/htdocs/blackandwhite");
   define("BASE_URL", "http://".$_SERVER['SERVER_NAME']);
 
   $sitename = "BlackAndWhite.ORG";

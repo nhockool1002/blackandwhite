@@ -135,7 +135,7 @@
                         <a href="index.php?page=them-sach"><i class="glyphicon glyphicon-share"></i> Thêm sách mới</a>
                     </li>
                     <li>
-                        <a href="index.php?page=statcat"><i class="glyphicon glyphicon-share"></i> Hướng dẫn thêm sách</a>
+                        <a href="index.php?page=huong-dan-them-sach"><i class="glyphicon glyphicon-share"></i> Hướng dẫn thêm sách</a>
                     </li>
                 </ul>
             </li>

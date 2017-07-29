@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 25, 2017 lúc 02:41 SA
--- Phiên bản máy phục vụ: 10.1.21-MariaDB
--- Phiên bản PHP: 5.6.30
+-- Thời gian đã tạo: Th7 29, 2017 lúc 08:46 AM
+-- Phiên bản máy phục vụ: 10.1.25-MariaDB
+-- Phiên bản PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -37,7 +39,8 @@ CREATE TABLE `author` (
 
 INSERT INTO `author` (`authorid`, `authorname`) VALUES
 (2, 'ThS. Nguyễn Thơ Sinh'),
-(3, 'PGS. TS. Trần Thị Minh Đức');
+(3, 'PGS. TS. Trần Thị Minh Đức'),
+(4, 'A.R.  LURIA');
 
 -- --------------------------------------------------------
 
@@ -53,6 +56,7 @@ CREATE TABLE `books` (
   `year` int(100) DEFAULT NULL,
   `filename` varchar(255) NOT NULL,
   `link` text NOT NULL,
+  `download` varchar(255) DEFAULT NULL,
   `des` text NOT NULL,
   `catid` int(10) NOT NULL,
   `spec` tinyint(1) NOT NULL,
@@ -63,9 +67,10 @@ CREATE TABLE `books` (
 -- Đang đổ dữ liệu cho bảng `books`
 --
 
-INSERT INTO `books` (`bookid`, `bookname`, `author`, `nxb`, `year`, `filename`, `link`, `des`, `catid`, `spec`, `credits`) VALUES
-(3, 'Các học thuyết tâm lý nhân cách', 2, 'Trống', 0, 'Cachocthuyettamlynhancach-NguyenThoSinh.png', '<iframe src=\"https://docs.google.com/document/d/1aXkrpWW8Pn0jFrZ5ig9t_LBZzOBBVf7iwoyq4YHTpy0/pub?embedded=true\"></iframe>', 'Trong các chuyên ngành Tâm lý học có ở ta, tâm lý học nhân cách là chuyên ngành non trẻ nhất. ', 1, 1, 0),
-(4, 'Các thực nghiệm trong tâm lý học xã hội', 3, 'Trống', 0, 'dadas.png', '<iframe src=\"https://docs.google.com/document/d/1twnugoKJRA9Ph-9SYUX_NA4H-YU1es38caL4G0IvDGE/pub?embedded=true\"></iframe>', 'Trong hơn một thể kỉ qua, đã có nhiều thực nghiệm trong tâm lí học xã hội được tiến hành. ', 1, 1, 0);
+INSERT INTO `books` (`bookid`, `bookname`, `author`, `nxb`, `year`, `filename`, `link`, `download`, `des`, `catid`, `spec`, `credits`) VALUES
+(3, 'Các học thuyết tâm lý nhân cách', 2, 'Trống', 0, 'Cachocthuyettamlynhancach-NguyenThoSinh.png', '<iframe src=\"https://docs.google.com/document/d/1aXkrpWW8Pn0jFrZ5ig9t_LBZzOBBVf7iwoyq4YHTpy0/pub?embedded=true\"></iframe>', NULL, 'Trong các chuyên ngành Tâm lý học có ở ta, tâm lý học nhân cách là chuyên ngành non trẻ nhất. ', 1, 1, 0),
+(4, 'Các thực nghiệm trong tâm lý học xã hội', 3, 'Trống', 0, 'dadas.png', '<iframe src=\"https://docs.google.com/document/d/1twnugoKJRA9Ph-9SYUX_NA4H-YU1es38caL4G0IvDGE/pub?embedded=true\"></iframe>', NULL, 'Trong hơn một thể kỉ qua, đã có nhiều thực nghiệm trong tâm lí học xã hội được tiến hành. ', 1, 1, 0),
+(5, 'Cơ sở tâm lý học thần kinh', 4, 'Trống', 0, 'cosotamlyhoc.PNG', '<iframe src=\"https://docs.google.com/document/d/1lmejfpZgGJhEQjMMJT97T0sIFM91gWve90VD3NyWx20/pub?embedded=true\"></iframe>', NULL, 'Tâm lý học thần kinh là một ngành khoa học còn non trẻ; và tất nhiên các lĩnh vực chuyên ngành còn chưa được biên soạn như nhau; ', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -273,12 +278,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `author`
 --
 ALTER TABLE `author`
-  MODIFY `authorid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `authorid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT cho bảng `books`
 --
 ALTER TABLE `books`
-  MODIFY `bookid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `bookid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT cho bảng `category`
 --
@@ -325,6 +330,7 @@ ALTER TABLE `books`
 --
 ALTER TABLE `memup`
   ADD CONSTRAINT `memup_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `users` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

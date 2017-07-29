@@ -47,20 +47,6 @@ $obj = new Db(); ?>
         </ul>
         <a name="menuchinhchinh"></a>
         <div class="menuchinh" id="menuchinh">Menu chính (Phím tắt <u>7</u>)</div>
-        <p style="text-align:center; font-weight:bolder;"> Tác giả</p>
-        <ul>
-          <?php
-            if(isset($_GET['page'])){
-              if($_GET['page'] == 'tailieu'){
-                $sql="SELECT * FROM author ORDER BY authorid ASC LIMIT 0,5";
-                $obj = new Db();
-                $rows = $obj->select($sql);
-                foreach ($rows as $row) {
-
-          ?>
-            <li><p class="itemmenuchinh"><a href="index.php?page=viewauthor&id=<?php echo $row['authorid']; ?>"><?php echo $row['authorname']; ?></a></p></li>
-            <?php }}}  ?>
-        </ul>
         <p style="text-align:center; font-weight:bolder;"> Danh mục</p>
         <ul>
           <?php
@@ -88,7 +74,12 @@ $obj = new Db(); ?>
           case 'gioithieu':
             require_once("inc/intro.php");
             break;
-
+          case 'viewcat':
+            require_once("inc/viewcat.php");
+            break;
+          case 'viewbook':
+            require_once("inc/viewbook.php");
+            break;
           default:
             require_once("inc/content.php");
             break;

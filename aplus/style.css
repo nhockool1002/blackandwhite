@@ -30,3 +30,7 @@ ul li{
 .itemmenuchinh a:hover{
   text-decoration: none;
 }
+iframe {
+    width: 50em;
+    height: 50em;
+}

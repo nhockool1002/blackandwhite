@@ -79,6 +79,11 @@
             <small class="text-muted">*Liên kết [iframe] được publish từ Google Docs</small>
             <br>
             <br>
+            <label for="pdprice">Liên kết tải tài liệu</label>  <label class="label label-warning"> * Important</label>
+            <input type="text" class="form-control" id="pdprice" placeholder="Nhập giá sản phẩm" name="bookdownload">
+            <small class="text-muted">*Liên kết tải về từ Google Drive</small>
+            <br>
+            <br>
             <label>Sách nổi bật</label>
             <select class="form-control" id="pddvt" name="bookspecial">
               <option value="0" selected="selected">-- Không </option>
@@ -117,11 +122,12 @@
             $booklink = $_POST['booklink'];
             $bookspecial = $_POST['bookspecial'];
             $bookcredit = $_POST['bookcredit'];
+            $bookdownload = $_POST['bookdownload'];
 
             $target = ROOT."/upload/".$bookimg;
             $ins = new Db();
-            $sql = "INSERT INTO `books`(`bookname`,`des`, `author`, `catid`, `nxb`, `year`,`filename`,`link`, `spec`, `credits`)
-                    VALUES ('$bookname','$bookdes' ,'$bookauthor' ,'$bookcat','$bookpublish','$bookyear', '$bookimg','$booklink','$bookspecial','$bookcredit')";
+            $sql = "INSERT INTO `books`(`bookname`,`des`, `author`, `catid`, `nxb`, `year`,`filename`,`link`, `spec`, `credits`,`download`)
+                    VALUES ('$bookname','$bookdes' ,'$bookauthor' ,'$bookcat','$bookpublish','$bookyear', '$bookimg','$booklink','$bookspecial','$bookcredit','$bookdownload')";
             $ins->select($sql);
             move_uploaded_file($_FILES['bookimg']['tmp_name'],$target);
 
