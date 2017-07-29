@@ -24,7 +24,7 @@ $(document).ready(function() {
   return false;
   });
 
-  Mousetrap.bind('alt+0', function() {window.location.assign("http://localhost/blackandwhite");}, 'keyup');
+  Mousetrap.bind('alt+0', function() {window.location.assign("index.php");}, 'keyup');
 
   Mousetrap.bind('alt+w', function() {
       var currentFontSize = $(section).css('font-size');
@@ -44,5 +44,9 @@ $(document).ready(function() {
       $(section).css('font-size', newFontSize);
       return false;
     });
+    Mousetrap.bind('alt+j', function() {window.location.assign("index.php?page=gioithieu");}, 'keyup');
+    Mousetrap.bind('6', function() {window.location.assign("#menuchinh");}, 'keyup');
+    Mousetrap.bind('7', function() {window.location.assign("#menuchinhchinh");}, 'keyup');
+    Mousetrap.bind('9', function() {window.location.assign("#noidung");}, 'keyup');
 
 });
