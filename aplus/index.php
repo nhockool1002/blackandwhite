@@ -40,13 +40,13 @@ $obj = new Db(); ?>
           <li><p class="itemmenuchinh"><a href="index.php?page=trangchu">Trang chủ (Phím tắt <u>alt+a</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=gioithieu">Giới thiệu (Phím tắt <u>alt+j</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=tailieu">Tài liệu (Phím tắt <u>alt+l</u>)</a></p></li>
-          <li><p class="itemmenuchinh"><a href="index.php?page=vieclam">Tìm kiếm việc làm (Phím tắt <u>alt+c</u>)</a></p></li>
+          <li><p class="itemmenuchinh"><a href="index.php?page=danhsachvieclam">Tìm kiếm việc làm (Phím tắt <u>alt+c</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=hocbong">Học bỗng (Phím tắt <u>alt+n</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=nhataitro">Nhà tài trợ (Phím tắt <u>alt+m</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=lienhe">Liên hệ (Phím tắt <u>alt+p</u>)</a></p></li>
         </ul>
         <a name="menuchinhchinh"></a>
-        <div class="menuchinh" id="menuchinh">Menu chính (Phím tắt <u>7</u>)</div>
+        <div class="menuchinh" id="menuchinh">Menu Phụ (Phím tắt <u>7</u>)</div>
         <p style="text-align:center; font-weight:bolder;"> Danh mục</p>
         <ul>
           <?php
@@ -71,11 +71,26 @@ $obj = new Db(); ?>
         }
         else $page = "";
         switch ($page) {
+          case 'hocbong':
+            require_once("inc/hocbong.php");
+            break;
+          case 'danhsachhocbong':
+            require_once("inc/danhsachhocbong.php");
+            break;
+          case 'tailieu':
+            require_once("inc/tailieu.php");
+            break;
           case 'gioithieu':
             require_once("inc/intro.php");
             break;
           case 'viewcat':
             require_once("inc/viewcat.php");
+            break;
+          case 'vieclam':
+            require_once("inc/vieclam.php");
+            break;
+          case 'danhsachvieclam':
+            require_once("inc/danhsachvieclam.php");
             break;
           case 'viewbook':
             require_once("inc/viewbook.php");

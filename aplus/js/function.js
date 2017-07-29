@@ -45,7 +45,11 @@ $(document).ready(function() {
       return false;
     });
     Mousetrap.bind('alt+0', function() {window.location.assign("../index.php");}, 'keyup');
+    Mousetrap.bind('alt+a', function() {window.location.assign("index.php");}, 'keyup');
     Mousetrap.bind('alt+j', function() {window.location.assign("index.php?page=gioithieu");}, 'keyup');
+    Mousetrap.bind('alt+c', function() {window.location.assign("index.php?page=danhsachvieclam");}, 'keyup');
+    Mousetrap.bind('alt+l', function() {window.location.assign("index.php?page=tailieu");}, 'keyup');
+    Mousetrap.bind('alt+n', function() {window.location.assign("index.php?page=danhsachhocbong");}, 'keyup');
     Mousetrap.bind('6', function() {window.location.assign("#menuchinh");}, 'keyup');
     Mousetrap.bind('7', function() {window.location.assign("#menuchinhchinh");}, 'keyup');
     Mousetrap.bind('9', function() {window.location.assign("#noidung");}, 'keyup');
