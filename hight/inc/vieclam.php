@@ -7,7 +7,7 @@
 
 
 ?>
-<div style="margin-left:2em;">
+<div style="margin-left:5em;">
 <p style="text-align:center; font-weight:bolder;"> <?php
   echo $row['rtit'];
 ?></p>

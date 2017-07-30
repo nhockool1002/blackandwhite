@@ -89,7 +89,7 @@ $obj = new Db(); ?>
           <li><p class="itemmenuchinh"><a href="index.php?page=gioithieu">Giới thiệu (Phím tắt <u>alt+j</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=tailieu">Tài liệu (Phím tắt <u>alt+l</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=danhsachvieclam">Tìm kiếm việc làm (Phím tắt <u>alt+c</u>)</a></p></li>
-          <li><p class="itemmenuchinh"><a href="index.php?page=hocbong">Học bỗng (Phím tắt <u>alt+n</u>)</a></p></li>
+          <li><p class="itemmenuchinh"><a href="index.php?page=danhsachhocbong">Học bỗng (Phím tắt <u>alt+n</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=nhataitro">Nhà tài trợ (Phím tắt <u>alt+m</u>)</a></p></li>
           <li><p class="itemmenuchinh"><a href="index.php?page=lienhe">Liên hệ (Phím tắt <u>alt+p</u>)</a></p></li>
         </ul>

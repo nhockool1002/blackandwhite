@@ -48,11 +48,8 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a href="#" class="fa fa-facebook"></a>
-                      <a href="#" class="fa fa-youtube"></a>
-                      <a href="#" class="fa fa-twitter"></a>
-                      <a href="#" class="fa fa-skype"></a>
-                      <a href="#" class="fa fa-rss"></a>
+                      <a href="http://www.facebook.com/Black-and-White-770169526477685/" class="fa fa-facebook"></a>
+                      <a href="mailto:blackandwhitelibrary@gmail.com"><img src="http://www.freeiconspng.com/uploads/gmail-logo-icon-7.png" alt="" width=40px height=40px></a>
                     </div>
                   </div>
                 </div>

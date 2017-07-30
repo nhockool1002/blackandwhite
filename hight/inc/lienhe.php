@@ -1,5 +1,5 @@
 <p style="text-align:center; font-weight:bolder;"> Liên hệ</p>
-<div style="margin-left:2em;">
+<div style="margin-left:5em;">
 <p><span style="font-size: 16.0pt; line-height: 115%; font-family: 'Times New Roman','serif';">Mọi c&acirc;u hỏi v&agrave; đ&oacute;ng g&oacute;p cho dự &aacute;n xin li&ecirc;n hệ:</span></p>
 <p style="text-indent: 28.35pt;"><span style="font-size: 14.0pt; line-height: 115%; font-family: 'Times New Roman','serif';">Anh <strong>Nguyễn Ngọc Hiệp</strong> - Trưởng nh&oacute;m </span></p>
 <p style="text-indent: 28.35pt;"><span style="font-size: 14.0pt; line-height: 115%; font-family: 'Times New Roman','serif';">Email: ng.hiep227@gmail.com &nbsp;| &nbsp;Tel: (+84) 985990677 </span></p>
