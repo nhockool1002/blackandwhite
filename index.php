@@ -90,6 +90,9 @@ session_start(); ?>
     </script>
   </head>
   <body>
+    <div class="aplus">
+      <a href="aplus/"><img src="http://media.merchantcircle.com/29980528/A%2B%20Logo_full.jpeg" width="30px" height="30px"></a>
+    </div>
     <?php if(isset($_SESSION['bawuser'])) { ?>
 
     <nav id="fixNav">

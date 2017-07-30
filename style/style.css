@@ -1,5 +1,11 @@
 *{}
 
+.aplus{
+  position: fixed;
+  z-index: 999999;
+  right:0;
+  top:0;
+}
 
 .contactme span {
     color: red;
@@ -154,6 +160,7 @@ nav.navbar.navbar-default.navbar-fnt.navbar-backgrnd.menu-primary {
 
 body {
     font-family: 'Prata', serif;
+    position:relative;
 }
 
 .datetime span {
