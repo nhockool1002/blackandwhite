@@ -1,0 +1,46 @@
+body{
+  background-color: #565656;
+}
+p{
+  color:yellow;
+}
+
+.binhthuong .chucnangtop .tieudechucnangtop a{color:yellow;text-decoration: none;font-weight: bold;font-size: 1em;}
+
+.chucnangtop span.cach{padding-right:0.5em;}
+
+.font12{ font-size:1.2em; }
+
+/*Vị trí hiện tại*/
+.binhthuong .vitrihientai{padding:1em 1em; margin:.5em 0; color:yellow; font-size:2em; font-weight:bold; display:block; border-bottom:0.09em dotted #ccc; border-top:0.09em dotted #ccc;line-height:1.5em;}
+.nightmode .vitrihientai{padding:1em 1em; margin:.5em 0;font-size:2em; font-weight:bold; display:block; border-bottom:0.09em dotted #eee; border-top:0.09em dotted #eee;line-height:1.5em;}
+.highvisibility .vitrihientai{padding:1em 1em; margin:.5em 0;font-size:2em; font-weight:bold; display:block; border-bottom:0.09em dotted #fff; border-top:0.09em dotted #fff;line-height:1.5em;}
+
+.menuchinh{
+  width:100%;
+  text-align:center;
+  background:grey;
+  color: yellow;
+  font-size: 2em;
+  height: 1.5em;
+}
+ul li:first-child{
+  margin-top:2em;
+}
+ul li{
+  line-height: 1em;
+}
+
+.itemmenuchinh a{
+  color:yellow;
+}
+.itemmenuchinh a:hover{
+  text-decoration: none;
+}
+iframe {
+    width: 50em;
+    height: 50em;
+}
+.form{
+  color:yellow;
+}

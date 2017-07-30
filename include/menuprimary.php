@@ -19,10 +19,10 @@
             <a class="nav-link first-item" href="index.php?page=tin-hoc-bong">Học bổng<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link first-item" href="index.php">Nhà tài trợ<span class="sr-only">(current)</span></a>
+            <a class="nav-link first-item" href="index.php?page=nha-tai-tro">Nhà tài trợ<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link first-item" href="index.php">Liên hệ<span class="sr-only">(current)</span></a>
+            <a class="nav-link first-item" href="index.php?page=lien-he">Liên hệ<span class="sr-only">(current)</span></a>
           </li>
           <form class="form-inline text-sm-right searchbox" method="post" action="index.php?page=tim-kiem">
               <input class="form-control" type="text" placeholder="Tác giả, Keywork" style="width:200px;" name="getvalue">

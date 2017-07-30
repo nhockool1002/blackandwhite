@@ -25,7 +25,7 @@
           <fieldset class="form-group">
             <label for="exampleInputEmail1"><b>Bạn hãy nhập vào ô dưới đây cụm từ ‘BLACKANDWHITE’ theo  chữ viết của người khiếm thị (VD: ‘HI BA’ được viết như sau: 12524121)</b></label>
             <input type="text" class="form-control" name="qt" id="qt" placeholder="Your Answer">
-            <small style="color:red;">Nếu bạn không biết câu trả lời có thể bỏ qua.</small>
+            <small style="color:red;">Nếu bạn không biết câu trả lời có thể nhập bất kỳ một ký tự.</small>
           </fieldset>
           <fieldset>
             <iframe style="width:100%; height:150px;" src="https://docs.google.com/document/d/e/2PACX-1vTefCn5TzSI-WIi_HPYHd3zLG6SlK7twrHvo7h0S_enGj-U7qIsOf25MduxOqFzPW6utE1lJrYEThmj/pub?embedded=true"></iframe>
@@ -56,24 +56,24 @@
             $counte = $obj->getRowCount();
 
             if($username == "" || $pass == "" || $repass == "" || $email == ""){
-              echo "Không để trống bất kỳ trường nào."."<br>";
+              echo "<center><b>Không để trống bất kỳ trường nào.</center></b>"."<br>";
             }
 
             elseif($pass != $repass){
-              echo "Mật khẩu và mật khẩu xác nhận không giống nhau."."<br>";
+              echo "<center><b>Mật khẩu và mật khẩu xác nhận không giống nhau.</center></b>"."<br>";
             }
 
             elseif($count == 1){
-              echo "Tên tài khoản này đã được đăng ký"."<br>";
+              echo "<center><b>Tên tài khoản này đã được đăng ký</center></b>"."<br>";
             }
 
 
             elseif($counte == 1){
-              echo "Email này đã được đăng ký"."<br>";
+              echo "<center><b>Email này đã được đăng ký</center></b>"."<br>";
             }
 
             elseif(!isset($_POST['dkhoan'])){
-              echo "Chưa đồng ý điều khoản"."<br>";
+              echo "<center><b>Chưa đồng ý điều khoản</center></b>"."<br>";
             }
 
 
@@ -82,7 +82,7 @@
             $sql = "INSERT INTO `users`(`username`, `password`, `email`,`confirm`)
                     VALUES ('$username','$pass','$email','$confirm')";
             $obj->select($sql);
-            echo "Đăng ký thành công"."<br>";
+            echo "<center><b>Đăng ký thành công</center></b>"."<br>";
             header( "Refresh:0; url=index.php");
             $_SESSION['bawuser'] = $username;
           }}

@@ -35,9 +35,9 @@ $obj = new Db(); ?>
             <a class='resetFont' style='cursor: pointer; cursor: hand;font-size: 0.9em;'>Đặt lại cỡ chữ chuẩn </a><span class="font12">(Phím tắt  <u>alt+r</u>)</span><span class="cach"></span>
             <a class='decreaseFont' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title=''>Giảm kích cỡ chữ </a><span class="font12">(Phím tắt  <u>alt+e</u>)</span><span class="cach"></span><br>
 
-            <a class='tieudechucnangtoptieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title=''>Chế độ bình thường</a><span class="font12">(Phím tắt  <u>alt+q</u>)</span><span class="cach"></span>
-            <a class='tieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;'>Chế độ ban đêm </a><span class="font12">(Phím tắt  <u>alt+z</u>)</span><span class="cach"></span>
-            <a class='tieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title=''>Chế độ tương phản cao</a><span class="font12">(Phím tắt  <u>alt+x</u>)</span><span class="cach"></span><br>
+            <a class='normals' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title=''>Chế độ bình thường</a><span class="font12">(Phím tắt  <u>alt+q</u>)</span><span class="cach"></span>
+            <a class='nights' style='cursor: pointer; cursor: hand;font-size: 0.9em;'>Chế độ ban đêm </a><span class="font12">(Phím tắt  <u>alt+z</u>)</span><span class="cach"></span>
+            <a class='hights' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title=''>Chế độ tương phản cao</a><span class="font12">(Phím tắt  <u>alt+x</u>)</span><span class="cach"></span><br>
             <a class='tieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title='' href="index.php?page=timkiemtukhoa#noidung">Tìm kiếm theo từ khóa</a><span class="cach"></span>
             <?php
               if(isset($_SESSION['baw'])){

@@ -130,6 +130,12 @@ session_start(); ?>
             else $id = "";
 
             switch ($id) {
+              case 'nha-tai-tro':
+                require_once("include/donor.php");
+                break;
+              case 'lien-he':
+                require_once("include/contact.php");
+                break;
               case 'tim-kiem':
                 require_once("include/find.php");
                 break;
