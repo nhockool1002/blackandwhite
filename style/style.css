@@ -1,10 +1,15 @@
 *{}
 
 .aplus{
-  position: fixed;
+  position: relative;
   z-index: 999999;
-  right:0;
-  top:0;
+  background-color: transparent;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.favorite .card-img-top{
+  height: 200px;
 }
 
 .contactme span {
@@ -124,7 +129,7 @@ a.nav-link.dropdown-toggle.item-menu-primary {
 }
 
 h4.card-title {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .newbook img.card-img-top {

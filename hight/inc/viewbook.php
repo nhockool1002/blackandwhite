@@ -1,7 +1,7 @@
 
 <?php
-  if(isset($_SESSION['baw'])){
-    $user = $_SESSION['baw'];
+  if(isset($_SESSION['bawuser'])){
+    $user = $_SESSION['bawuser'];
     $check = "SELECT * FROM users WHERE username='$user' AND confirm = 1";
     $obj = new Db();
     $obj->select($check);

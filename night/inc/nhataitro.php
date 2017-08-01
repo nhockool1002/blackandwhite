@@ -1,6 +1,5 @@
 <p style="text-align:center; font-weight:bolder;"> Nhà tài trợ</p>
 <div style="margin-left:5em;">
-<center><img src="../img/ntt3.png" alt=""></center><br>
 <p style="text-align: center;"><strong><span style="font-size: 22.0pt; line-height: 115%; font-family: 'Constantia','serif'; color: #c00000;">QUYỀN LỢI NH&Agrave; T&Agrave;I TRỢ</span></strong></p>
 <ol>
 <li style="text-indent: -.25in;"><strong><span style="font-size: 18.0pt; line-height: 115%; font-family: 'Monotype Corsiva'; color: #7030a0;">Ai c&oacute; th</span></strong><strong><span style="font-size: 18.0pt; line-height: 115%; font-family: 'Times New Roman','serif'; color: #7030a0;">ể</span></strong><strong><span style="font-size: 18.0pt; line-height: 115%; font-family: 'Monotype Corsiva'; color: #7030a0;"> l&agrave; nh&agrave; t&agrave;i tr</span></strong><strong><span style="font-size: 18.0pt; line-height: 115%; font-family: 'Times New Roman','serif'; color: #7030a0;">ợ</span></strong><strong><span style="font-size: 18.0pt; line-height: 115%; font-family: 'Monotype Corsiva'; color: #7030a0;">? </span></strong></li>
@@ -23,6 +22,9 @@
 <p style="margin-left: 35.45pt; text-align: justify;"><span style="font-size: 14.0pt; line-height: 115%; font-family: 'Times New Roman','serif';">C&aacute;c nh&agrave; hảo t&acirc;m, nh&agrave; t&agrave;i trợ, đối t&aacute;c khi gi&uacute;p đỡ dự &aacute;n, sẽ mang lại nguồn động vi&ecirc;n to lớn cho cộng đồng người khiếm thị n&oacute;i chung, v&agrave; cộng đồng học sinh sinh vi&ecirc;n khiếm thị n&oacute;i ri&ecirc;ng... Hơn nữa, ch&uacute;ng t&ocirc;i tr&acirc;n trọng h&agrave;nh động hỗ trợ của qu&yacute; vị khi chung tay xo&aacute; bỏ khoảng c&aacute;ch của những mảnh đời kh&oacute; khăn với cộng đồng. Ch&uacute;ng t&ocirc;i vinh hạnh lưu t&ecirc;n qu&yacute; vị v&agrave;o danh s&aacute;ch c&aacute;c nh&agrave; t&agrave;i trợ tr&ecirc;n trang thư viện của ch&uacute;ng t&ocirc;i.</span></p>
 <center>
 <table border="2px" style="width:100%;">
+  <tr>
+      <td colspan="4">DANH SÁCH NHÀ TÀI TRỢ</td>
+  </tr>
   <tr>
     <td>STT</td>
     <td>Tên nhà tài trợ</td>

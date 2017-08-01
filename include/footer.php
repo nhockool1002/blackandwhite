@@ -1,6 +1,11 @@
 <footer>
 <div class="container-fluid">
   <div class="row">
+    <div class="col-sm-12" style="background:#a6a5a5; height: 100px; width:100%;">
+
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-12 text-sm-center">
         <div class="container-fluid">
           <div class="row">
@@ -22,19 +27,19 @@
                 <div class="container">
                   <div class="row linka">
                     <div class="col-sm-4">
-                      <a href="#"><span>Link1</span><br></a>
-                      <a href="#"><span>Link2</span><br></a>
-                      <a href="#"><span>Link3</span></a>
+                      <a href="index.php"><span>Trang chủ</span><br></a>
+                      <a href="index.php?page=gioi-thieu"><span>Giới thiệu</span><br></a>
+                      <a href="index.php?page=tai-lieu"><span>Tài liệu</span></a>
                     </div>
                     <div class="col-sm-4">
-                      <a href="#"><span>Link4</span><br></a>
-                      <a href="#"><span>Link5</span><br></a>
-                      <a href="#"><span>Link6</span></a>
+                      <a href="index.php?page=tin-tuyen-dung"><span>Việc làm</span><br></a>
+                      <a href="index.php?page=tin-hoc-bong"><span>Học bỗng</span><br></a>
+                      <a href="index.php?page=nha-tai-tro"><span>Nhà tài trợ</span></a>
                     </div>
                     <div class="col-sm-4">
-                      <a href="#"><span>Link7</span><br></a>
-                      <a href="#"><span>Link8</span><br></a>
-                      <a href="#"><span>Link9</span></a>
+                      <a href="index.php?page=lien-he"><span>Liên hệ</span><br></a>
+                      <a href="index.php?page=gop-y"><span>Góp ý</span><br></a>
+                      <a href="index.php?page=upload"><span>Upload</span></a>
                     </div>
                   </div>
                 </div>

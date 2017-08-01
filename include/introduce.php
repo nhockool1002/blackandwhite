@@ -66,7 +66,7 @@
   	</SPAN></SPAN></FONT>
   	</P>
   </UL>
-  <P STYLE="margin-left: 0.2in; margin-bottom: 0in"><FONT COLOR="#000000"><SPAN STYLE="background: #ffffff">“
+  <P STYLE="margin-left: 0.2in; margin-bottom: 0in"><FONT COLOR="#000000"><SPAN STYLE="background: #ffffff">
   <SPAN LANG="vi-VN">- "Black and White” là một thư viện điện
   tử  dùng để tìm kiếm, tra cứu tài liệu , tải tài lệu
   miễn phí dành riêng cho người khiếm thị trên địa bàn
@@ -76,7 +76,7 @@
   8 năm 2017  Black and White  được thành lập với 5 thành
   viên, trụ sở văn phòng tạm thời đặt ở Tp. Hồ Chí
   Minh, thư viện Black and white tập trung vào việc tải chỉnh
-  sửa, scan tài liệu, định dạng phông phù hợp, in ấn
+  sửa, scan tài liệu, định dạng font phù hợp, in ấn
   tài liệu hoàn toàn miễn phí cho sinh viên khiếm thị trên
   địa bàn thành phố Hồ Chí Minh.</SPAN></SPAN></FONT></P><br>
   <UL>

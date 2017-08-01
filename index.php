@@ -105,6 +105,7 @@ session_start(); ?>
         <li><a href="index.php?page=upload-manager">Quản lí tài liệu</a></li>
      </ul>
     </li>
+    <li><a href="index.php?page=gop-y">Góp ý</a></li>
     <li><a href="index.php?page=dang-xuat">Log Out</a></li>
     <?php if(isset($_SESSION['bawuser']) && $_SESSION['bawuser'] == 'admin') {?>
       <li><a href="admin/">AdminCP</a></li>
@@ -133,6 +134,9 @@ session_start(); ?>
             else $id = "";
 
             switch ($id) {
+              case 'gop-y':
+                require_once("include/feedback.php");
+                break;
               case 'nha-tai-tro':
                 require_once("include/donor.php");
                 break;

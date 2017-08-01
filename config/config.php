@@ -12,6 +12,6 @@
   define("ROOT", "D:/Dev/Software/xampp/htdocs/blackandwhite");
   define("BASE_URL", "http://".$_SERVER['SERVER_NAME']);
 
-  $sitename = "BlackAndWhite.ORG";
-  $slogan = "Thư viện danh cho sinh viên khiếm thị";
+  $sitename = "Black and White";
+  $slogan = "Thư viện điện tử dành cho người khiếm thị";
 ?>
