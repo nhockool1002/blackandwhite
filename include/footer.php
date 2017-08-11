@@ -1,10 +1,10 @@
 <footer>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12" style="background:#a6a5a5; height: 100px; width:100%;">
-
-    </div>
-  </div>
+  <!--<div class="row">-->
+  <!--  <div class="col-sm-12 text-sm-center" style="background:#a6a5a5; height: 100%; width:100%;">-->
+      
+  <!--  </div>-->
+  <!--</div>-->
   <div class="row">
     <div class="col-sm-12 text-sm-center">
         <div class="container-fluid">
@@ -13,7 +13,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-sm-2">
-                      <img src="http://thuyxuantien.com/_2/img/ntt.png" style="width:80px;">
+                      <img src="img/44.png" style="width:80px;">
                     </div>
                     <div class="col-sm-10 contactft">
                       <span>Address: H3 Building, 384 Hoàng Diệu, P6, Q4, TPHCM </span><br>

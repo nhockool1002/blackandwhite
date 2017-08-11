@@ -24,6 +24,8 @@
   <?php
     echo $row['link'];
   ?>
+  <br>
+      <a href="<?php echo $row['download']; ?>"><img src="http://hocnuahocmai.net/uploads/news/2017_01/download-1.png" alt="" width="250px"></a>
 </center>
 <?php
 }

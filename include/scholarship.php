@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT * FROM scholarship";
+$sql = "SELECT * FROM scholarship ORDER BY sid DESC";
 $obj = new Db();
 $rows = $obj->select($sql);
 ?>

@@ -9,7 +9,7 @@
     <center><div class="nav-link active" href="#"><span>Sách</span></div></center>
   </nav>
   <?php
-    $sql="SELECT * FROM `books` INNER JOIN `author` ON books.author = author.authorid WHERE authorname like '%$string%'";
+    $sql="SELECT * FROM `books` INNER JOIN `author` ON books.author = author.authorid INNER JOIN category ON books.catid = category.catid WHERE authorname like '%$string%' AND credits=0";
     $ob = new Db();
     $rows = $ob->select($sql);
     $num1 = $ob->getRowCount();
@@ -22,20 +22,24 @@
       <td style="font-weight:bold;width:100px;">STT</td>
       <td style="font-weight:bold;width:500px;">Tên sách</td>
       <td style="font-weight:bold;width:200px;">Tác giả</td>
+      <td style="font-weight:bold;width:200px;">Danh mục</td>
       <td style="font-weight:bold;">Xem</td>
     </tr>
-    <?php foreach ($rows as $key => $row) {
+    <?php $i = 1;
+    foreach ($rows as $key => $row) {
+        
     ?>
     <tr>
-      <td style="width:100px;"><?php echo $row['bookid'] ?></td>
-      <td style="width:500px;"><?php echo $row['bookname'] ?></td>
-      <td style="width:200px;"><?php echo $row['authorname'] ?></td>
-      <td><a href="index.php?page=xem-sach&idbook=<?php echo $row['bookid'] ?>">[Xem]</a></td>
+      <td style="width:100px;"><?php echo $i++; ?></td>
+      <td style="width:500px;"><?php echo $row['bookname']; ?></td>
+      <td style="width:200px;"><?php echo $row['authorname']; ?></td>
+      <td style="width:200px;"><?php echo $row['catname']; ?></td>
+      <td><a href="index.php?page=xem-sach&idbook=<?php echo $row['bookid']; ?>">[Xem]</a></td>
     </tr>
-    <?php } ?>
+    <?php $i++; } ?>
   </table>
   <?php
-    $sql="SELECT * FROM `books` INNER JOIN `author` ON books.author = author.authorid WHERE bookname like '%$string%'";
+    $sql="SELECT * FROM `books` INNER JOIN `author` ON books.author = author.authorid INNER JOIN category ON books.catid = category.catid WHERE bookname like '%$string%' AND credits=0";
     $ob = new Db();
     $rows = $ob->select($sql);
     $num1 = $ob->getRowCount();
@@ -48,17 +52,21 @@
       <td style="font-weight:bold;width:100px;">STT</td>
       <td style="font-weight:bold;width:500px;">Tên sách</td>
       <td style="font-weight:bold;width:200px;">Tác giả</td>
+      <td style="font-weight:bold;width:200px;">Danh mục</td>
       <td style="font-weight:bold;">Xem</td>
     </tr>
-    <?php foreach ($rows as $key => $row) {
+    <?php $i = 1;
+    foreach ($rows as $key => $row) {
+        
     ?>
     <tr>
-      <td style="width:100px;"><?php echo $row['bookid'] ?></td>
-      <td style="width:500px;"><?php echo $row['bookname'] ?></td>
-      <td style="width:200px;"><?php echo $row['authorname'] ?></td>
+      <td style="width:100px;"><?php echo $i++; ?></td>
+      <td style="width:500px;"><?php echo $row['bookname']; ?></td>
+      <td style="width:200px;"><?php echo $row['authorname']; ?></td>
+      <td style="width:200px;"><?php echo $row['catname']; ?></td>
       <td><a href="index.php?page=xem-sach&idbook=<?php echo $row['bookid'] ?>">[Xem]</a></td>
     </tr>
-    <?php } ?>
+    <?php $i = $i++; } ?>
   </table>
 </div>
 

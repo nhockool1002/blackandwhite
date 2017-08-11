@@ -5,7 +5,7 @@
   z-index: 999999;
   background-color: transparent;
   text-align: center;
-  margin-top: -10px;
+  margin-top: 0px;
 }
 
 .favorite .card-img-top{
@@ -93,7 +93,9 @@ a.nav-link.dropdown-toggle.item-menu-primary {
     margin-top: 10px;
 }
 
-.bookoject {}
+.bookoject {
+    height: 350px;
+}
 
 .showcase span {
     color: white;
@@ -164,7 +166,6 @@ nav.navbar.navbar-default.navbar-fnt.navbar-backgrnd.menu-primary {
 }
 
 body {
-    font-family: 'Prata', serif;
     position:relative;
 }
 
@@ -234,11 +235,11 @@ width: 100%;
 height: 35px;
 background-color: #0082bb;
 display: block;
-box-shadow: 0px 2px 2px rgba(0,0,0,0.5); /*Đổ bóng cho menu*/
-position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
-top: 0; /*Nằm trên cùng*/
-left: 0; /*Nằm sát bên trái*/
-z-index: 100000; /*Hiển thị lớp trên cùng*/
+box-shadow: 0px 2px 2px rgba(0,0,0,0.5); /*Äá»• bĂ³ng cho menu*/
+position: fixed; /*Cho menu cá»‘ Ä‘á»‹nh 1 vá»‹ trĂ­ vá»›i top vĂ  left*/
+top: 0; /*Náº±m trĂªn cĂ¹ng*/
+left: 0; /*Náº±m sĂ¡t bĂªn trĂ¡i*/
+z-index: 100000; /*Hiá»ƒn thá»‹ lá»›p trĂªn cĂ¹ng*/
 }
 #fixNav ul{
 margin: 0;
@@ -248,7 +249,7 @@ padding: 0;
 list-style:none inside;
 width: auto;
 float: left;
-line-height: 35px; /*Cho text canh giữa menu*/
+line-height: 35px; /*Cho text canh giá»¯a menu*/
 color: #fff;
 padding: 0;
 margin-right:10px;
@@ -256,7 +257,7 @@ position: relative;
 }
 #fixNav ul li a{
 text-transform: uppercase;
-white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
+white-space: nowrap; /*Cho chá»¯ trong menu khĂ´ng bá»‹ wrap*/
 padding: 0 10px;
 color: #fff;
 display: block;
@@ -277,15 +278,15 @@ padding-left: 5px;
 display: block;
 padding:0;
 margin: 0;
-float: none; /*Bỏ float cho li cấp thứ 2*/
+float: none; /*Bá» float cho li cáº¥p thá»© 2*/
 }
 /* Hover cho submenu */
 #fixNav ul li:hover {
-/* Hover thì li sẽ đổi màu*/
+/* Hover thĂ¬ li sáº½ Ä‘á»•i mĂ u*/
 background-color: #252525;
 }
 #fixNav ul li:hover ul{
 /*Display ra submenu*/
 display: block;
 }
-/*Không copy cái này, dùng tăng padding top bottom để demo cuộn*/
+/*KhĂ´ng copy cĂ¡i nĂ y, dĂ¹ng tÄƒng padding top bottom Ä‘á»ƒ demo cuá»™n*/

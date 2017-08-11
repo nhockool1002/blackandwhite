@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT * FROM recruite";
+$sql = "SELECT * FROM recruite ORDER BY rid DESC";
 $obj = new Db();
 $rows = $obj->select($sql);
 ?>

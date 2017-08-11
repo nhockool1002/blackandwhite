@@ -134,9 +134,6 @@
                     <li>
                         <a href="index.php?page=them-sach"><i class="glyphicon glyphicon-share"></i> Thêm sách mới</a>
                     </li>
-                    <li>
-                        <a href="index.php?page=huong-dan-them-sach"><i class="glyphicon glyphicon-share"></i> Hướng dẫn thêm sách</a>
-                    </li>
                 </ul>
             </li>
             <li>
@@ -204,10 +201,10 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo4"><i class="glyphicon glyphicon-fire"></i> Quản lý Báo cáo <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo4"><i class="glyphicon glyphicon-fire"></i> Hướng dẫn <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo4" class="collapse">
                     <li>
-                        <a href="#"><i class="glyphicon glyphicon-share"></i> Danh sách Báo cáo</a>
+                        <a href="index.php?page=huong-dan"><i class="glyphicon glyphicon-share"></i> Hướng dẫn các nội dung</a>
                     </li>
                 </ul>
             </li>

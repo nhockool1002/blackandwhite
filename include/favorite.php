@@ -7,7 +7,7 @@
         <div class="card-deck-wrapper">
           <div class="card-deck">
             <?php
-            $sql = "SELECT * FROM books INNER JOIN author ON books.author = author.authorid WHERE spec = 1 AND credits =0 LIMIT 0,6";
+            $sql = "SELECT * FROM books INNER JOIN author ON books.author = author.authorid WHERE spec = 1 AND credits =0 ORDER BY bookid DESC LIMIT 0,6";
             $obj = new Db();
             $rows = $obj->select($sql);
             foreach ($rows as $row) {

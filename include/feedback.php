@@ -12,8 +12,8 @@
         </form>
         <?php
           if(isset($_POST['btn_submit'])){
-            $to = "hotrodichvuweb@gmail.com";  
-            $subject = "Contact Us";
+            $to = "blackandwhitelibrary@gmail.com";  
+            $subject = "[BlackandWhite FeedBack]";
             $email = $_REQUEST['email'] ;
             $message = $_REQUEST['message'] ;
             $headers = "From: $email";  $sent = mail($to, $subject, $message, $headers) ;

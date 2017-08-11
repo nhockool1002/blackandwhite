@@ -91,7 +91,7 @@ session_start(); ?>
   </head>
   <body>
     <div class="aplus">
-      <a href="aplus/"><img src="http://media.merchantcircle.com/29980528/A%2B%20Logo_full.jpeg" width="30px" height="30px"></a>
+      <a href="aplus/"><img src="http://sv1.upsieutoc.com/2017/08/07/20668503_900137976792213_1418625872_n.png" width="70px" height="30px"> Giao diện tiếp cận người khiếm thị</a>
     </div>
     <?php if(isset($_SESSION['bawuser'])) { ?>
 
@@ -193,6 +193,10 @@ session_start(); ?>
     <?php
     require_once("include/footer.php");
     ?>
+    <div style="text-align:center;">  <a href="http://www.hitwebcounter.com" target="_blank">
+<img src="http://hitwebcounter.com/counter/counter.php?page=6743426&style=0025&nbdigits=9&type=page&initCount=215" title="good hits" Alt="good hits"   border="0" >
+</a>   </div>
   </body>
+
 </html>
 <?php ob_end_flush(); ?>

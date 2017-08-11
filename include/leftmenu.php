@@ -13,13 +13,13 @@
         <p style="margin-top:20px;"></p>
         <button type="submit" class="btn btn-primary btn-xs" name="submit">Đăng nhập</button>
         <p style="margin-top:10px;"></p>
-        <a href="http://localhost/blackandwhite/index.php?page=dang-ky"><button type="button" class="btn btn-primary btn-xs">Đăng ký</button></a>
+        <a href="index.php?page=dang-ky"><button type="button" class="btn btn-primary btn-xs">Đăng ký</button></a>
       </form>
       <?php }else{ ?>
         <p>Thông tin tài khoản</p>
         <p style="color:blue;">Xin chào, <b><?php echo $_SESSION['bawuser']; ?></b> chúc bạn một ngày vui vẻ !</p>
         <p>Chọn chuyên mục để xem sach</p>
-        <img src="https://image.flaticon.com/icons/svg/24/24567.svg" style="width:50%;">
+        <img src="http://blackandwhitelibrary.org/img/arrow.png" style="width:50%;height:80px;">
         <?php } ?>
         <?php
           if(isset($_POST['submit'])){
