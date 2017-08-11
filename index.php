@@ -106,6 +106,7 @@ session_start(); ?>
      </ul>
     </li>
     <li><a href="index.php?page=gop-y">Góp ý</a></li>
+    <li><a href="index.php?page=doi-mat-khau">Đổi mật khẩu</a></li>
     <li><a href="index.php?page=dang-xuat">Log Out</a></li>
     <?php if(isset($_SESSION['bawuser']) && $_SESSION['bawuser'] == 'admin') {?>
       <li><a href="admin/">AdminCP</a></li>
@@ -134,6 +135,12 @@ session_start(); ?>
             else $id = "";
 
             switch ($id) {
+              case 'doi-mat-khau':
+                require_once("include/changepass.php");
+                break;
+              case 'quen-mat-khau':
+                require_once("include/forgotpass.php");
+                break;
               case 'gop-y':
                 require_once("include/feedback.php");
                 break;
