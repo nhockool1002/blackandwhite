@@ -102,7 +102,7 @@ $obj = new Db(); ?>
         <div class="menuchinh" id="menuchinh">Menu Phụ (Phím tắt <u>7</u>)</div>
         <p style="text-align:center; font-weight:bolder;"> Danh mục</p>
         <ul>
-            <li><p class="itemmenuchinh"><a href="index.php?page=tailieunoibat">Tài liệu nỗi bật</a></p></li>
+            <li><p class="itemmenuchinh"><a href="index.php?page=tailieunoibat">Tài liệu nổi bật</a></p></li>
           <?php
             // if(isset($_GET['page'])){
             //   if($_GET['page'] == 'tailieu'){

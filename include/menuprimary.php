@@ -25,7 +25,7 @@
             <a class="nav-link first-item" href="index.php?page=lien-he">Liên hệ<span class="sr-only">(current)</span></a>
           </li>
           <form class="form-inline text-sm-right searchbox" method="post" action="index.php?page=tim-kiem">
-              <input class="form-control" type="text" placeholder="Tác giả, Keywork" style="width:200px;" name="getvalue">
+              <input class="form-control" type="text" placeholder="Tác giả, từ khóa" style="width:200px;" name="getvalue">
               <button type="submit" class="btn btn-primary" name="submit">Tìm</button>
           </form>
         </ul>

@@ -1,4 +1,5 @@
 <?php
+if(isset($_SESSION['bawuser'])){
 $id = $_GET['idbook'];
 $sql = "SELECT * FROM books WHERE bookid = '$id'";
 $obj = new Db();
@@ -17,3 +18,15 @@ $row = $obj->select1($sql);
     </div>
   </div>
 </div>
+<?php }else{ ?>
+  <div class="col-sm-10">
+      <nav class="navbar navbar-default navbar-fnt navbar-backgrnd menu-primary showcase">
+      <center><div class="nav-link active" href="#"><span>LỖI</span></div></center>
+    </nav>
+    <div class="row showcases text-sm-center">
+      <div class="col-sm-12 text-sm-center">
+        <center><b>VUI LÒNG ĐĂNG NHẬP ĐỂ XEM SÁCH</b></center>
+      </div>
+    </div>
+  </div>
+<?php } ?>

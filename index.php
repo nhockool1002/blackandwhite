@@ -107,7 +107,7 @@ session_start(); ?>
     </li>
     <li><a href="index.php?page=gop-y">Góp ý</a></li>
     <li><a href="index.php?page=doi-mat-khau">Đổi mật khẩu</a></li>
-    <li><a href="index.php?page=dang-xuat">Log Out</a></li>
+    <li><a href="index.php?page=dang-xuat">Đăng Xuất</a></li>
     <?php if(isset($_SESSION['bawuser']) && $_SESSION['bawuser'] == 'admin') {?>
       <li><a href="admin/">AdminCP</a></li>
       <?php } ?>
