@@ -46,10 +46,12 @@ $obj = new Db(); ?>
               if(isset($_SESSION['bawuser'])){
             ?>
             <a class='tieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title='' href="index.php?page=dangxuat#noidung">Đăng xuất</a><span class="cach"></span>
+            <a class='tieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title='' href="index.php?page=doi-mat-khau#noidung">Đổi mật khẩu</a><span class="cach"></span>
             <?php }else{ ?>
             <a class='tieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title='' href="index.php?page=dangky#noidung">Đăng ký</a><span class="cach"></span>
 
             <a class='tieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title='' href="index.php?page=dangnhap#noidung">Đăng nhập</a><span class="cach"></span>
+            <a class='tieudechucnangtop' style='cursor: pointer; cursor: hand;font-size: 0.9em;' title='' href="index.php?page=quen-mat-khau#noidung">Quên mật khẩu</a><span class="cach"></span>
             <?php } ?>
           </p>
           </div>
@@ -123,6 +125,12 @@ $obj = new Db(); ?>
         }
         else $page = "";
         switch ($page) {
+          case 'doi-mat-khau':
+          require_once("inc/doimatkhau.php");
+          break;
+          case 'quen-mat-khau':
+          require_once("inc/quenmatkhau.php");
+          break;
             case 'tailieunoibat':
             require_once("inc/tailieunoibat.php");
             break;

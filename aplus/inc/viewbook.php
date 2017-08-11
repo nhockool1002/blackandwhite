@@ -30,10 +30,11 @@
 <?php
 }
 
-}else{
+}
+}
+else{
   ?>
   <center><font color="red"><b>Bạn không có quyền xem sách tại trang dành cho người khiếm thị . Bạn sẽ được chuyển qua giao diện người bình thường để xem sách<b></font></center>
   <?php header( "Refresh:5; url=../index.php"); ?>
   <?php
-}
 } ?>
