@@ -10,11 +10,11 @@
         <input type="text" name="username" size='15'>
         <p style="margin-bottom:-3px;">Mật khẩu</p>
         <input type="password" name="pass" size='15'>
-        <p style="margin-top:20px;"></p>
+        <p style="margin-top:-5px;"></p>
         <button type="submit" class="btn btn-primary btn-xs" name="submit">Đăng nhập</button>
-        <p style="margin-top:10px;"></p>
-        <a href="index.php?page=dang-ky"><button type="button" class="btn btn-primary btn-xs">Đăng ký</button></a>
-        <a href="index.php?page=quen-mat-khau"><button type="button" class="btn btn-success btn-xs" name="">Quên mật khẩu</button></a>
+        <p style="margin-top:-5px;"></p>
+        <a href="index.php?page=dang-ky"><button type="button" class="btn btn-primary btn-xs">Đăng ký</button></a><br>
+        <a href="index.php?page=quen-mat-khau">Quên mật khẩu</a>
       </form>
       <?php }else{ ?>
         <p>Thông tin tài khoản</p>

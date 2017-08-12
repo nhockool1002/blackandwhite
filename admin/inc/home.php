@@ -85,7 +85,20 @@
         </div>
         <!-- /.row -->
 
+        <div class="row">
+          <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Thống kê
+                    </li>
+                </ol>
+          </div>
+          <div class="col-sm-3">
+                           <?php include("counter.php");   ?>
+          </div>
 
+                   
+        </div>
         <!-- /.row -->
 
 
