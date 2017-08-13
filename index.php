@@ -4,11 +4,11 @@ session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
+
     <?php
     require_once("include/connect.php");
     require_once("include/header.php");
     ?>
-
     <style media="screen">
     #fixNav{
     width: 100%;
@@ -93,7 +93,8 @@ session_start(); ?>
     <div class="aplus">
       <a href="aplus/"><img src="http://sv1.upsieutoc.com/2017/08/07/20668503_900137976792213_1418625872_n.png" width="70px" height="30px"> Giao diện tiếp cận người khiếm thị</a>
     </div>
-    <?php if(isset($_SESSION['bawuser'])) { ?>
+    <?php if(isset($_SESSION['bawuser'])) { 
+      ?>
 
     <nav id="fixNav">
   <ul>

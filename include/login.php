@@ -32,8 +32,13 @@
             }
             else{
             echo "Đăng nhập thành công"."<br>";
-            header( "Refresh:1; url=index.php");
-            $_SESSION['bawuser'] = $username;
+            $username = $_SESSION['bawuser'];
+          $sql ="SELECT * FROM users WHERE username = '$username'";
+          $obj = new Db();
+          $row = $obj->select1($sql);
+          if($row['confirm'] == 1){
+              header( "Refresh:0; url=aplus");
+            }
           }
           }
         ?>
